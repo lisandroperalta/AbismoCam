@@ -1,0 +1,10 @@
+.gradle/
+**/build/
+local.properties
+.idea/
+*.iml
+app/src/main/jniLibs/**/*.so
+tools/*.zip
+captures/
+entregables/
+*-build.log

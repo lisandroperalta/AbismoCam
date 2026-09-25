@@ -1,0 +1,1371 @@
+﻿2026-09-17 01:12:54.473   Log opened. (Time zone: UTC-03:00)
+2026-09-17 01:12:54.474   Setup version: Inno Setup version 6.1.2
+2026-09-17 01:12:54.474   Original Setup EXE: D:\OneDrive\Trabajos\Biopus\El abismo de la visibilidad\NDI 6 SDK (Android).exe
+2026-09-17 01:12:54.474   Setup command line: /SL5="$160B80,38618389,1032704,D:\OneDrive\Trabajos\Biopus\El abismo de la visibilidad\NDI 6 SDK (Android).exe" /SPAWNWND=$A60C1A /NOTIFYWND=$460040 /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /CURRENTUSER /DIR="C:\Users\lisan\AppData\Local\NDI-SDK-Android" /LOG="D:\OneDrive\Trabajos\Biopus\El abismo de la visibilidad\AbismoCam\ndi-android-install.log" 
+2026-09-17 01:12:54.474   Compatibility mode: Yes (DetectorsAppHealth Installer)
+2026-09-17 01:12:54.477   Windows version: 10.0.26200  (NT platform: Yes)
+2026-09-17 01:12:54.477   64-bit Windows: Yes
+2026-09-17 01:12:54.477   Processor architecture: x64
+2026-09-17 01:12:54.477   User privileges: Administrative
+2026-09-17 01:12:54.480   Administrative install mode: Yes
+2026-09-17 01:12:54.480   Install mode root key: HKEY_LOCAL_MACHINE
+2026-09-17 01:12:54.480   64-bit install mode: Yes
+2026-09-17 01:12:54.485   Created temporary directory: C:\Users\lisan\AppData\Local\Temp\is-121VV.tmp
+2026-09-17 01:12:54.908   Found 9 files to register with RestartManager.
+2026-09-17 01:12:54.908   Calling RestartManager's RmGetList.
+2026-09-17 01:12:54.917   RmGetList finished successfully.
+2026-09-17 01:12:54.917   RestartManager found no applications using one of our files.
+2026-09-17 01:12:54.919   Starting the installation process.
+2026-09-17 01:12:54.922   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android
+2026-09-17 01:12:54.923   Setting permissions on directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android
+2026-09-17 01:12:54.923   Starting 64-bit helper process.
+2026-09-17 01:12:54.970   Helper process PID: 25756
+2026-09-17 01:12:54.999   Directory for uninstall files: C:\Users\lisan\AppData\Local\NDI-SDK-Android
+2026-09-17 01:12:54.999   Creating new uninstall log: C:\Users\lisan\AppData\Local\NDI-SDK-Android\unins000.dat
+2026-09-17 01:12:55.009   -- File entry --
+2026-09-17 01:12:55.009   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\unins000.exe
+2026-09-17 01:12:55.009   Non-default bitness: 32-bit
+2026-09-17 01:12:55.012   Time stamp of our file: 2026-09-17 01:12:53.925
+2026-09-17 01:12:55.012   Installing the file.
+2026-09-17 01:12:55.019   Successfully installed the file.
+2026-09-17 01:12:55.020   -- File entry --
+2026-09-17 01:12:55.020   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Bin\Utilities\x64\NDI Benchmark.exe
+2026-09-17 01:12:55.020   Time stamp of our file: 2026-04-14 17:18:06.000
+2026-09-17 01:12:55.020   Installing the file.
+2026-09-17 01:12:55.021   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Bin
+2026-09-17 01:12:55.021   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Bin\Utilities
+2026-09-17 01:12:55.021   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Bin\Utilities\x64
+2026-09-17 01:12:55.325   Successfully installed the file.
+2026-09-17 01:12:55.325   -- File entry --
+2026-09-17 01:12:55.325   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Bin\Utilities\x64\NDI Discovery Service.exe
+2026-09-17 01:12:55.326   Time stamp of our file: 2026-04-14 17:18:18.000
+2026-09-17 01:12:55.326   Installing the file.
+2026-09-17 01:12:55.350   Successfully installed the file.
+2026-09-17 01:12:55.350   -- File entry --
+2026-09-17 01:12:55.350   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Bin\Utilities\x64\NDI FreeAudio.exe
+2026-09-17 01:12:55.351   Time stamp of our file: 2026-04-14 17:18:00.000
+2026-09-17 01:12:55.351   Installing the file.
+2026-09-17 01:12:55.809   Successfully installed the file.
+2026-09-17 01:12:55.809   -- File entry --
+2026-09-17 01:12:55.809   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Bin\Utilities\x64\NewTek NDI Record.exe
+2026-09-17 01:12:55.809   Time stamp of our file: 2026-04-14 17:18:04.000
+2026-09-17 01:12:55.809   Installing the file.
+2026-09-17 01:12:56.118   Successfully installed the file.
+2026-09-17 01:12:56.118   -- File entry --
+2026-09-17 01:12:56.119   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Bin\Utilities\x64\Processing.NDI.Lib.Licenses.txt
+2026-09-17 01:12:56.119   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:56.119   Installing the file.
+2026-09-17 01:12:56.120   Successfully installed the file.
+2026-09-17 01:12:56.120   -- File entry --
+2026-09-17 01:12:56.121   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Bin\Utilities\x86\NDI Benchmark.exe
+2026-09-17 01:12:56.121   Time stamp of our file: 2026-04-14 17:18:46.000
+2026-09-17 01:12:56.121   Installing the file.
+2026-09-17 01:12:56.121   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Bin\Utilities\x86
+2026-09-17 01:12:56.201   Successfully installed the file.
+2026-09-17 01:12:56.201   -- File entry --
+2026-09-17 01:12:56.201   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Bin\Utilities\x86\NDI Discovery Service.exe
+2026-09-17 01:12:56.202   Time stamp of our file: 2026-04-14 17:18:46.000
+2026-09-17 01:12:56.202   Installing the file.
+2026-09-17 01:12:56.221   Successfully installed the file.
+2026-09-17 01:12:56.221   -- File entry --
+2026-09-17 01:12:56.222   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Bin\Utilities\x86\NDI FreeAudio.exe
+2026-09-17 01:12:56.222   Time stamp of our file: 2026-04-14 17:18:44.000
+2026-09-17 01:12:56.222   Installing the file.
+2026-09-17 01:12:56.348   Successfully installed the file.
+2026-09-17 01:12:56.348   -- File entry --
+2026-09-17 01:12:56.348   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Bin\Utilities\x86\NewTek NDI Record.exe
+2026-09-17 01:12:56.348   Time stamp of our file: 2026-04-14 17:18:46.000
+2026-09-17 01:12:56.348   Installing the file.
+2026-09-17 01:12:56.412   Successfully installed the file.
+2026-09-17 01:12:56.413   -- File entry --
+2026-09-17 01:12:56.413   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Bin\Utilities\x86\Processing.NDI.Lib.Licenses.txt
+2026-09-17 01:12:56.413   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:56.413   Installing the file.
+2026-09-17 01:12:56.415   Successfully installed the file.
+2026-09-17 01:12:56.415   -- File entry --
+2026-09-17 01:12:56.415   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\NDI Information.url
+2026-09-17 01:12:56.415   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:56.415   Installing the file.
+2026-09-17 01:12:56.416   Successfully installed the file.
+2026-09-17 01:12:56.416   -- File entry --
+2026-09-17 01:12:56.416   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\NDI Changes.pdf
+2026-09-17 01:12:56.417   Time stamp of our file: 2026-04-13 12:05:44.000
+2026-09-17 01:12:56.417   Installing the file.
+2026-09-17 01:12:56.432   Successfully installed the file.
+2026-09-17 01:12:56.432   -- File entry --
+2026-09-17 01:12:56.434   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Documentation\Introduction to the NDI SDK.pdf
+2026-09-17 01:12:56.434   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:56.434   Installing the file.
+2026-09-17 01:12:56.434   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Documentation
+2026-09-17 01:12:56.446   Successfully installed the file.
+2026-09-17 01:12:56.446   -- File entry --
+2026-09-17 01:12:56.446   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Documentation\NDI Brand Guidelines.pdf
+2026-09-17 01:12:56.446   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:56.446   Installing the file.
+2026-09-17 01:12:57.343   Successfully installed the file.
+2026-09-17 01:12:57.343   -- File entry --
+2026-09-17 01:12:57.343   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Documentation\NDI SDK Documentation.pdf
+2026-09-17 01:12:57.344   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.344   Installing the file.
+2026-09-17 01:12:57.424   Successfully installed the file.
+2026-09-17 01:12:57.424   -- File entry --
+2026-09-17 01:12:57.425   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Documentation\Brand Assets\1. NDI\1.1 NDI Logo\Dark\NDI Logo Master.png
+2026-09-17 01:12:57.425   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.425   Installing the file.
+2026-09-17 01:12:57.425   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Documentation\Brand Assets
+2026-09-17 01:12:57.425   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Documentation\Brand Assets\1. NDI
+2026-09-17 01:12:57.426   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Documentation\Brand Assets\1. NDI\1.1 NDI Logo
+2026-09-17 01:12:57.426   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Documentation\Brand Assets\1. NDI\1.1 NDI Logo\Dark
+2026-09-17 01:12:57.427   Successfully installed the file.
+2026-09-17 01:12:57.428   -- File entry --
+2026-09-17 01:12:57.428   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Documentation\Brand Assets\1. NDI\1.1 NDI Logo\Dark\NDI Logo Master.svg
+2026-09-17 01:12:57.428   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.428   Installing the file.
+2026-09-17 01:12:57.429   Successfully installed the file.
+2026-09-17 01:12:57.429   -- File entry --
+2026-09-17 01:12:57.430   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Documentation\Brand Assets\1. NDI\1.1 NDI Logo\Dark\NDI Logo Master@5x.png
+2026-09-17 01:12:57.430   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.430   Installing the file.
+2026-09-17 01:12:57.436   Successfully installed the file.
+2026-09-17 01:12:57.436   -- File entry --
+2026-09-17 01:12:57.437   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Documentation\Brand Assets\1. NDI\1.1 NDI Logo\Light\NDI Logo Master - Light.png
+2026-09-17 01:12:57.437   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.437   Installing the file.
+2026-09-17 01:12:57.437   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Documentation\Brand Assets\1. NDI\1.1 NDI Logo\Light
+2026-09-17 01:12:57.440   Successfully installed the file.
+2026-09-17 01:12:57.440   -- File entry --
+2026-09-17 01:12:57.440   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Documentation\Brand Assets\1. NDI\1.1 NDI Logo\Light\NDI Logo Master - Light.svg
+2026-09-17 01:12:57.441   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.441   Installing the file.
+2026-09-17 01:12:57.442   Successfully installed the file.
+2026-09-17 01:12:57.442   -- File entry --
+2026-09-17 01:12:57.442   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Documentation\Brand Assets\1. NDI\1.1 NDI Logo\Light\NDI Logo Master - Light@5x.png
+2026-09-17 01:12:57.443   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.443   Installing the file.
+2026-09-17 01:12:57.448   Successfully installed the file.
+2026-09-17 01:12:57.448   -- File entry --
+2026-09-17 01:12:57.448   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Documentation\Brand Assets\1. NDI\1.2 NDI Logo with Tagline\Dark\NDI Logo with Tagline Dark.png
+2026-09-17 01:12:57.449   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.449   Installing the file.
+2026-09-17 01:12:57.449   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Documentation\Brand Assets\1. NDI\1.2 NDI Logo with Tagline
+2026-09-17 01:12:57.449   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Documentation\Brand Assets\1. NDI\1.2 NDI Logo with Tagline\Dark
+2026-09-17 01:12:57.451   Successfully installed the file.
+2026-09-17 01:12:57.452   -- File entry --
+2026-09-17 01:12:57.452   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Documentation\Brand Assets\1. NDI\1.2 NDI Logo with Tagline\Dark\NDI Logo with Tagline Dark.svg
+2026-09-17 01:12:57.452   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.452   Installing the file.
+2026-09-17 01:12:57.454   Successfully installed the file.
+2026-09-17 01:12:57.454   -- File entry --
+2026-09-17 01:12:57.454   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Documentation\Brand Assets\1. NDI\1.2 NDI Logo with Tagline\Dark\NDI Logo with Tagline Dark@5x.png
+2026-09-17 01:12:57.454   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.454   Installing the file.
+2026-09-17 01:12:57.461   Successfully installed the file.
+2026-09-17 01:12:57.462   -- File entry --
+2026-09-17 01:12:57.462   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Documentation\Brand Assets\1. NDI\1.2 NDI Logo with Tagline\Light\NDI Logo with Tagline Light.png
+2026-09-17 01:12:57.462   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.462   Installing the file.
+2026-09-17 01:12:57.463   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Documentation\Brand Assets\1. NDI\1.2 NDI Logo with Tagline\Light
+2026-09-17 01:12:57.465   Successfully installed the file.
+2026-09-17 01:12:57.465   -- File entry --
+2026-09-17 01:12:57.465   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Documentation\Brand Assets\1. NDI\1.2 NDI Logo with Tagline\Light\NDI Logo with Tagline Light.svg
+2026-09-17 01:12:57.467   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.467   Installing the file.
+2026-09-17 01:12:57.469   Successfully installed the file.
+2026-09-17 01:12:57.469   -- File entry --
+2026-09-17 01:12:57.469   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Documentation\Brand Assets\1. NDI\1.2 NDI Logo with Tagline\Light\NDI Logo with Tagline Light@5x.png
+2026-09-17 01:12:57.469   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.469   Installing the file.
+2026-09-17 01:12:57.477   Successfully installed the file.
+2026-09-17 01:12:57.477   -- File entry --
+2026-09-17 01:12:57.477   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Documentation\Brand Assets\2. NDI High Bandwidth\2.1 NDI High Bandwidth Logo\Dark\NDI High Bandwidth Logo Dark.png
+2026-09-17 01:12:57.478   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.478   Installing the file.
+2026-09-17 01:12:57.478   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Documentation\Brand Assets\2. NDI High Bandwidth
+2026-09-17 01:12:57.478   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Documentation\Brand Assets\2. NDI High Bandwidth\2.1 NDI High Bandwidth Logo
+2026-09-17 01:12:57.479   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Documentation\Brand Assets\2. NDI High Bandwidth\2.1 NDI High Bandwidth Logo\Dark
+2026-09-17 01:12:57.480   Successfully installed the file.
+2026-09-17 01:12:57.481   -- File entry --
+2026-09-17 01:12:57.481   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Documentation\Brand Assets\2. NDI High Bandwidth\2.1 NDI High Bandwidth Logo\Dark\NDI High Bandwidth Logo Dark.svg
+2026-09-17 01:12:57.481   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.481   Installing the file.
+2026-09-17 01:12:57.482   Successfully installed the file.
+2026-09-17 01:12:57.482   -- File entry --
+2026-09-17 01:12:57.482   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Documentation\Brand Assets\2. NDI High Bandwidth\2.1 NDI High Bandwidth Logo\Dark\NDI High Bandwidth Logo Dark@5x.png
+2026-09-17 01:12:57.483   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.483   Installing the file.
+2026-09-17 01:12:57.488   Successfully installed the file.
+2026-09-17 01:12:57.489   -- File entry --
+2026-09-17 01:12:57.489   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Documentation\Brand Assets\2. NDI High Bandwidth\2.1 NDI High Bandwidth Logo\Light\NDI High Bandwidth Logo Light.png
+2026-09-17 01:12:57.489   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.489   Installing the file.
+2026-09-17 01:12:57.489   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Documentation\Brand Assets\2. NDI High Bandwidth\2.1 NDI High Bandwidth Logo\Light
+2026-09-17 01:12:57.492   Successfully installed the file.
+2026-09-17 01:12:57.492   -- File entry --
+2026-09-17 01:12:57.492   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Documentation\Brand Assets\2. NDI High Bandwidth\2.1 NDI High Bandwidth Logo\Light\NDI High Bandwidth Logo Light.svg
+2026-09-17 01:12:57.492   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.493   Installing the file.
+2026-09-17 01:12:57.494   Successfully installed the file.
+2026-09-17 01:12:57.494   -- File entry --
+2026-09-17 01:12:57.495   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Documentation\Brand Assets\2. NDI High Bandwidth\2.1 NDI High Bandwidth Logo\Light\NDI High Bandwidth Logo Light@5x.png
+2026-09-17 01:12:57.495   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.495   Installing the file.
+2026-09-17 01:12:57.502   Successfully installed the file.
+2026-09-17 01:12:57.502   -- File entry --
+2026-09-17 01:12:57.502   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\DShow_Receive_Filter\DShow_Receive_Filter.cpp
+2026-09-17 01:12:57.503   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.503   Installing the file.
+2026-09-17 01:12:57.503   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples
+2026-09-17 01:12:57.503   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++
+2026-09-17 01:12:57.504   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\DShow_Receive_Filter
+2026-09-17 01:12:57.505   Successfully installed the file.
+2026-09-17 01:12:57.505   -- File entry --
+2026-09-17 01:12:57.505   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\DShow_Receive_Filter\DShow_Receive_Filter.vcxproj
+2026-09-17 01:12:57.506   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.506   Installing the file.
+2026-09-17 01:12:57.507   Successfully installed the file.
+2026-09-17 01:12:57.507   -- File entry --
+2026-09-17 01:12:57.507   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\DShow_Receive_Filter\DShow_Receive_Filter.vcxproj.filters
+2026-09-17 01:12:57.508   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.508   Installing the file.
+2026-09-17 01:12:57.510   Successfully installed the file.
+2026-09-17 01:12:57.510   -- File entry --
+2026-09-17 01:12:57.510   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_DynamicLoad\NDIlib_DynamicLoad.cpp
+2026-09-17 01:12:57.510   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.510   Installing the file.
+2026-09-17 01:12:57.511   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_DynamicLoad
+2026-09-17 01:12:57.513   Successfully installed the file.
+2026-09-17 01:12:57.513   -- File entry --
+2026-09-17 01:12:57.513   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_DynamicLoad\NDIlib_DynamicLoad.vcxproj
+2026-09-17 01:12:57.514   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.514   Installing the file.
+2026-09-17 01:12:57.515   Successfully installed the file.
+2026-09-17 01:12:57.515   -- File entry --
+2026-09-17 01:12:57.515   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_DynamicLoad\NDIlib_DynamicLoad.xcodeproj\project.pbxproj
+2026-09-17 01:12:57.516   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.516   Installing the file.
+2026-09-17 01:12:57.516   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_DynamicLoad\NDIlib_DynamicLoad.xcodeproj
+2026-09-17 01:12:57.518   Successfully installed the file.
+2026-09-17 01:12:57.518   -- File entry --
+2026-09-17 01:12:57.518   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Find\NDIlib_Find.cpp
+2026-09-17 01:12:57.518   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.518   Installing the file.
+2026-09-17 01:12:57.519   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Find
+2026-09-17 01:12:57.521   Successfully installed the file.
+2026-09-17 01:12:57.521   -- File entry --
+2026-09-17 01:12:57.522   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Find\NDIlib_Find.vcxproj
+2026-09-17 01:12:57.522   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.522   Installing the file.
+2026-09-17 01:12:57.523   Successfully installed the file.
+2026-09-17 01:12:57.523   -- File entry --
+2026-09-17 01:12:57.523   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_FreeAudio\NDIlib_FreeAudio.cpp
+2026-09-17 01:12:57.525   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.525   Installing the file.
+2026-09-17 01:12:57.525   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_FreeAudio
+2026-09-17 01:12:57.527   Successfully installed the file.
+2026-09-17 01:12:57.527   -- File entry --
+2026-09-17 01:12:57.528   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_FreeAudio\NDIlib_FreeAudio.vcxproj
+2026-09-17 01:12:57.528   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.528   Installing the file.
+2026-09-17 01:12:57.530   Successfully installed the file.
+2026-09-17 01:12:57.530   -- File entry --
+2026-09-17 01:12:57.530   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv\NDIlib_Recv.cpp
+2026-09-17 01:12:57.531   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.531   Installing the file.
+2026-09-17 01:12:57.531   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv
+2026-09-17 01:12:57.532   Successfully installed the file.
+2026-09-17 01:12:57.532   -- File entry --
+2026-09-17 01:12:57.532   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv\NDIlib_Recv.vcxproj
+2026-09-17 01:12:57.533   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.533   Installing the file.
+2026-09-17 01:12:57.535   Successfully installed the file.
+2026-09-17 01:12:57.535   -- File entry --
+2026-09-17 01:12:57.536   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_Advertiser\NDIlib_Recv_Advertiser.cpp
+2026-09-17 01:12:57.536   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.536   Installing the file.
+2026-09-17 01:12:57.536   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_Advertiser
+2026-09-17 01:12:57.538   Successfully installed the file.
+2026-09-17 01:12:57.538   -- File entry --
+2026-09-17 01:12:57.538   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_Advertiser\NDIlib_Recv_Advertiser.vcxproj
+2026-09-17 01:12:57.538   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.538   Installing the file.
+2026-09-17 01:12:57.540   Successfully installed the file.
+2026-09-17 01:12:57.540   -- File entry --
+2026-09-17 01:12:57.540   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_Audio_16bpp\NDIlib_Recv_Audio_16bpp.cpp
+2026-09-17 01:12:57.540   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.540   Installing the file.
+2026-09-17 01:12:57.541   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_Audio_16bpp
+2026-09-17 01:12:57.542   Successfully installed the file.
+2026-09-17 01:12:57.542   -- File entry --
+2026-09-17 01:12:57.542   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_Audio_16bpp\NDIlib_Recv_Audio_16bpp.vcxproj
+2026-09-17 01:12:57.542   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.542   Installing the file.
+2026-09-17 01:12:57.544   Successfully installed the file.
+2026-09-17 01:12:57.544   -- File entry --
+2026-09-17 01:12:57.544   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_FrameSync\NDIlib_Recv_FrameSync.cpp
+2026-09-17 01:12:57.546   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.546   Installing the file.
+2026-09-17 01:12:57.546   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_FrameSync
+2026-09-17 01:12:57.547   Successfully installed the file.
+2026-09-17 01:12:57.547   -- File entry --
+2026-09-17 01:12:57.548   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_FrameSync\NDIlib_Recv_FrameSync.vcxproj
+2026-09-17 01:12:57.548   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.548   Installing the file.
+2026-09-17 01:12:57.548   Successfully installed the file.
+2026-09-17 01:12:57.548   -- File entry --
+2026-09-17 01:12:57.549   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_FrameSync_Audio\NDIlib_Recv_FrameSync_Audio.cpp
+2026-09-17 01:12:57.549   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.549   Installing the file.
+2026-09-17 01:12:57.549   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_FrameSync_Audio
+2026-09-17 01:12:57.551   Successfully installed the file.
+2026-09-17 01:12:57.551   -- File entry --
+2026-09-17 01:12:57.551   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_FrameSync_Audio\NDIlib_Recv_FrameSync_Audio.vcxproj
+2026-09-17 01:12:57.552   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.552   Installing the file.
+2026-09-17 01:12:57.553   Successfully installed the file.
+2026-09-17 01:12:57.553   -- File entry --
+2026-09-17 01:12:57.554   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_FrameSync_resend\NDIlib_Recv_FrameSync_resend.cpp
+2026-09-17 01:12:57.554   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.554   Installing the file.
+2026-09-17 01:12:57.554   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_FrameSync_resend
+2026-09-17 01:12:57.556   Successfully installed the file.
+2026-09-17 01:12:57.556   -- File entry --
+2026-09-17 01:12:57.557   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_FrameSync_resend\NDIlib_Recv_FrameSync_resend.vcxproj
+2026-09-17 01:12:57.557   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.557   Installing the file.
+2026-09-17 01:12:57.559   Successfully installed the file.
+2026-09-17 01:12:57.559   -- File entry --
+2026-09-17 01:12:57.560   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_FrameSync_timing\NDIlib_Recv_FrameSync_timing.cpp
+2026-09-17 01:12:57.560   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.560   Installing the file.
+2026-09-17 01:12:57.561   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_FrameSync_timing
+2026-09-17 01:12:57.563   Successfully installed the file.
+2026-09-17 01:12:57.563   -- File entry --
+2026-09-17 01:12:57.563   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_FrameSync_timing\NDIlib_Recv_FrameSync_timing.vcxproj
+2026-09-17 01:12:57.564   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.564   Installing the file.
+2026-09-17 01:12:57.566   Successfully installed the file.
+2026-09-17 01:12:57.566   -- File entry --
+2026-09-17 01:12:57.566   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_HDR\NDIlib_Recv_HDR.cpp
+2026-09-17 01:12:57.567   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.567   Installing the file.
+2026-09-17 01:12:57.567   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_HDR
+2026-09-17 01:12:57.569   Successfully installed the file.
+2026-09-17 01:12:57.569   -- File entry --
+2026-09-17 01:12:57.570   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_HDR\NDIlib_Recv_HDR.vcxproj
+2026-09-17 01:12:57.570   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.570   Installing the file.
+2026-09-17 01:12:57.571   Successfully installed the file.
+2026-09-17 01:12:57.571   -- File entry --
+2026-09-17 01:12:57.572   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_Listener\NDIlib_Recv_Listener.cpp
+2026-09-17 01:12:57.572   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.572   Installing the file.
+2026-09-17 01:12:57.572   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_Listener
+2026-09-17 01:12:57.574   Successfully installed the file.
+2026-09-17 01:12:57.574   -- File entry --
+2026-09-17 01:12:57.574   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_Listener\NDIlib_Recv_Listener.vcxproj
+2026-09-17 01:12:57.574   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.574   Installing the file.
+2026-09-17 01:12:57.576   Successfully installed the file.
+2026-09-17 01:12:57.576   -- File entry --
+2026-09-17 01:12:57.576   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_Listener_Advanced\NDIlib_Recv_Listener_Advanced.cpp
+2026-09-17 01:12:57.577   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.577   Installing the file.
+2026-09-17 01:12:57.577   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_Listener_Advanced
+2026-09-17 01:12:57.579   Successfully installed the file.
+2026-09-17 01:12:57.579   -- File entry --
+2026-09-17 01:12:57.579   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_Listener_Advanced\NDIlib_Recv_Listener_Advanced.vcxproj
+2026-09-17 01:12:57.580   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.580   Installing the file.
+2026-09-17 01:12:57.581   Successfully installed the file.
+2026-09-17 01:12:57.581   -- File entry --
+2026-09-17 01:12:57.581   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_Multichannel\NDIlib_Recv_Multichannel.cpp
+2026-09-17 01:12:57.582   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.582   Installing the file.
+2026-09-17 01:12:57.582   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_Multichannel
+2026-09-17 01:12:57.583   Successfully installed the file.
+2026-09-17 01:12:57.583   -- File entry --
+2026-09-17 01:12:57.584   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_Multichannel\NDIlib_Recv_Multichannel.vcxproj
+2026-09-17 01:12:57.584   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.584   Installing the file.
+2026-09-17 01:12:57.585   Successfully installed the file.
+2026-09-17 01:12:57.585   -- File entry --
+2026-09-17 01:12:57.585   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_PNG\NDIlib_Recv_PNG.cpp
+2026-09-17 01:12:57.586   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.586   Installing the file.
+2026-09-17 01:12:57.586   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_PNG
+2026-09-17 01:12:57.588   Successfully installed the file.
+2026-09-17 01:12:57.588   -- File entry --
+2026-09-17 01:12:57.588   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_PNG\NDIlib_Recv_PNG.vcxproj
+2026-09-17 01:12:57.588   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.588   Installing the file.
+2026-09-17 01:12:57.590   Successfully installed the file.
+2026-09-17 01:12:57.590   -- File entry --
+2026-09-17 01:12:57.590   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_PNG\NDIlib_Recv_PNG.vcxproj.filters
+2026-09-17 01:12:57.590   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.591   Installing the file.
+2026-09-17 01:12:57.592   Successfully installed the file.
+2026-09-17 01:12:57.592   -- File entry --
+2026-09-17 01:12:57.593   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_PTZ\NDIlib_Recv_PTZ.cpp
+2026-09-17 01:12:57.593   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.593   Installing the file.
+2026-09-17 01:12:57.593   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_PTZ
+2026-09-17 01:12:57.595   Successfully installed the file.
+2026-09-17 01:12:57.595   -- File entry --
+2026-09-17 01:12:57.595   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_PTZ\NDIlib_Recv_PTZ.vcxproj
+2026-09-17 01:12:57.596   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.596   Installing the file.
+2026-09-17 01:12:57.597   Successfully installed the file.
+2026-09-17 01:12:57.598   -- File entry --
+2026-09-17 01:12:57.598   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_WebControl\NDIlib_Recv_WebControl.cpp
+2026-09-17 01:12:57.598   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.598   Installing the file.
+2026-09-17 01:12:57.599   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_WebControl
+2026-09-17 01:12:57.601   Successfully installed the file.
+2026-09-17 01:12:57.601   -- File entry --
+2026-09-17 01:12:57.601   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Recv_WebControl\NDIlib_Recv_WebControl.vcxproj
+2026-09-17 01:12:57.601   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.601   Installing the file.
+2026-09-17 01:12:57.603   Successfully installed the file.
+2026-09-17 01:12:57.603   -- File entry --
+2026-09-17 01:12:57.603   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Routing\NDIlib_Routing.cpp
+2026-09-17 01:12:57.604   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.604   Installing the file.
+2026-09-17 01:12:57.604   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Routing
+2026-09-17 01:12:57.606   Successfully installed the file.
+2026-09-17 01:12:57.606   -- File entry --
+2026-09-17 01:12:57.606   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Routing\NDIlib_Routing.vcxproj
+2026-09-17 01:12:57.606   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.606   Installing the file.
+2026-09-17 01:12:57.608   Successfully installed the file.
+2026-09-17 01:12:57.608   -- File entry --
+2026-09-17 01:12:57.608   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Routing\NDIlib_Routing.xcodeproj\project.pbxproj
+2026-09-17 01:12:57.609   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.609   Installing the file.
+2026-09-17 01:12:57.609   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Routing\NDIlib_Routing.xcodeproj
+2026-09-17 01:12:57.611   Successfully installed the file.
+2026-09-17 01:12:57.611   -- File entry --
+2026-09-17 01:12:57.611   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_10bit\NDIlib_Send_10bit.cpp
+2026-09-17 01:12:57.612   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.612   Installing the file.
+2026-09-17 01:12:57.612   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_10bit
+2026-09-17 01:12:57.613   Successfully installed the file.
+2026-09-17 01:12:57.613   -- File entry --
+2026-09-17 01:12:57.614   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_10bit\NDIlib_Send_10bit.vcxproj
+2026-09-17 01:12:57.614   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.614   Installing the file.
+2026-09-17 01:12:57.615   Successfully installed the file.
+2026-09-17 01:12:57.616   -- File entry --
+2026-09-17 01:12:57.616   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_16bit\NDIlib_Send_16bit.cpp
+2026-09-17 01:12:57.616   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.616   Installing the file.
+2026-09-17 01:12:57.616   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_16bit
+2026-09-17 01:12:57.617   Successfully installed the file.
+2026-09-17 01:12:57.617   -- File entry --
+2026-09-17 01:12:57.618   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_16bit\NDIlib_Send_16bit.vcxproj
+2026-09-17 01:12:57.618   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.618   Installing the file.
+2026-09-17 01:12:57.620   Successfully installed the file.
+2026-09-17 01:12:57.620   -- File entry --
+2026-09-17 01:12:57.620   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Advertiser\NDIlib_Send_Advertiser.cpp
+2026-09-17 01:12:57.620   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.620   Installing the file.
+2026-09-17 01:12:57.621   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Advertiser
+2026-09-17 01:12:57.623   Successfully installed the file.
+2026-09-17 01:12:57.623   -- File entry --
+2026-09-17 01:12:57.623   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Advertiser\NDIlib_Send_Advertiser.vcxproj
+2026-09-17 01:12:57.623   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.624   Installing the file.
+2026-09-17 01:12:57.625   Successfully installed the file.
+2026-09-17 01:12:57.625   -- File entry --
+2026-09-17 01:12:57.625   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Audio\NDIlib_Send_Audio.cpp
+2026-09-17 01:12:57.626   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.626   Installing the file.
+2026-09-17 01:12:57.626   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Audio
+2026-09-17 01:12:57.627   Successfully installed the file.
+2026-09-17 01:12:57.628   -- File entry --
+2026-09-17 01:12:57.628   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Audio\NDIlib_Send_Audio.vcxproj
+2026-09-17 01:12:57.628   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.628   Installing the file.
+2026-09-17 01:12:57.630   Successfully installed the file.
+2026-09-17 01:12:57.630   -- File entry --
+2026-09-17 01:12:57.630   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_AudioFile\NDIlib_Send_AudioFile.cpp
+2026-09-17 01:12:57.630   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.630   Installing the file.
+2026-09-17 01:12:57.631   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_AudioFile
+2026-09-17 01:12:57.632   Successfully installed the file.
+2026-09-17 01:12:57.632   -- File entry --
+2026-09-17 01:12:57.634   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_AudioFile\NDIlib_Send_AudioFile.vcxproj
+2026-09-17 01:12:57.634   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.634   Installing the file.
+2026-09-17 01:12:57.636   Successfully installed the file.
+2026-09-17 01:12:57.637   -- File entry --
+2026-09-17 01:12:57.637   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Audio_16bpp\NDIlib_Send_Audio_16bpp.cpp
+2026-09-17 01:12:57.637   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.637   Installing the file.
+2026-09-17 01:12:57.637   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Audio_16bpp
+2026-09-17 01:12:57.639   Successfully installed the file.
+2026-09-17 01:12:57.639   -- File entry --
+2026-09-17 01:12:57.639   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Audio_16bpp\NDIlib_Send_Audio_16bpp.vcxproj
+2026-09-17 01:12:57.640   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.640   Installing the file.
+2026-09-17 01:12:57.642   Successfully installed the file.
+2026-09-17 01:12:57.642   -- File entry --
+2026-09-17 01:12:57.642   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Benchmark\NDIlib_Send_Benchmark.cpp
+2026-09-17 01:12:57.643   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.643   Installing the file.
+2026-09-17 01:12:57.643   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Benchmark
+2026-09-17 01:12:57.645   Successfully installed the file.
+2026-09-17 01:12:57.645   -- File entry --
+2026-09-17 01:12:57.645   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Benchmark\NDIlib_Send_Benchmark.vcxproj
+2026-09-17 01:12:57.645   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.645   Installing the file.
+2026-09-17 01:12:57.647   Successfully installed the file.
+2026-09-17 01:12:57.647   -- File entry --
+2026-09-17 01:12:57.647   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Benchmark_8K\NDIlib_Send_Benchmark_8K.cpp
+2026-09-17 01:12:57.648   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.648   Installing the file.
+2026-09-17 01:12:57.648   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Benchmark_8K
+2026-09-17 01:12:57.649   Successfully installed the file.
+2026-09-17 01:12:57.649   -- File entry --
+2026-09-17 01:12:57.649   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Benchmark_8K\NDIlib_Send_Benchmark_8K.vcxproj
+2026-09-17 01:12:57.649   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.649   Installing the file.
+2026-09-17 01:12:57.651   Successfully installed the file.
+2026-09-17 01:12:57.651   -- File entry --
+2026-09-17 01:12:57.652   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\NDIlib_Send_BMD.cpp
+2026-09-17 01:12:57.652   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.652   Installing the file.
+2026-09-17 01:12:57.652   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD
+2026-09-17 01:12:57.654   Successfully installed the file.
+2026-09-17 01:12:57.654   -- File entry --
+2026-09-17 01:12:57.654   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\NDIlib_Send_BMD.vcxproj
+2026-09-17 01:12:57.655   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.655   Installing the file.
+2026-09-17 01:12:57.656   Successfully installed the file.
+2026-09-17 01:12:57.656   -- File entry --
+2026-09-17 01:12:57.657   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Linux\include\DeckLinkAPI.h
+2026-09-17 01:12:57.657   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.657   Installing the file.
+2026-09-17 01:12:57.658   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK
+2026-09-17 01:12:57.659   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Linux
+2026-09-17 01:12:57.659   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Linux\include
+2026-09-17 01:12:57.662   Successfully installed the file.
+2026-09-17 01:12:57.662   -- File entry --
+2026-09-17 01:12:57.663   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Linux\include\DeckLinkAPIConfiguration.h
+2026-09-17 01:12:57.663   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.663   Installing the file.
+2026-09-17 01:12:57.665   Successfully installed the file.
+2026-09-17 01:12:57.665   -- File entry --
+2026-09-17 01:12:57.666   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Linux\include\DeckLinkAPIConfiguration_v10_2.h
+2026-09-17 01:12:57.666   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.666   Installing the file.
+2026-09-17 01:12:57.668   Successfully installed the file.
+2026-09-17 01:12:57.668   -- File entry --
+2026-09-17 01:12:57.669   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Linux\include\DeckLinkAPIConfiguration_v10_4.h
+2026-09-17 01:12:57.669   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.669   Installing the file.
+2026-09-17 01:12:57.670   Successfully installed the file.
+2026-09-17 01:12:57.671   -- File entry --
+2026-09-17 01:12:57.671   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Linux\include\DeckLinkAPIConfiguration_v10_5.h
+2026-09-17 01:12:57.671   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.671   Installing the file.
+2026-09-17 01:12:57.672   Successfully installed the file.
+2026-09-17 01:12:57.672   -- File entry --
+2026-09-17 01:12:57.673   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Linux\include\DeckLinkAPIConfiguration_v10_9.h
+2026-09-17 01:12:57.673   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.673   Installing the file.
+2026-09-17 01:12:57.675   Successfully installed the file.
+2026-09-17 01:12:57.675   -- File entry --
+2026-09-17 01:12:57.675   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Linux\include\DeckLinkAPIDeckControl.h
+2026-09-17 01:12:57.676   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.676   Installing the file.
+2026-09-17 01:12:57.679   Successfully installed the file.
+2026-09-17 01:12:57.679   -- File entry --
+2026-09-17 01:12:57.679   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Linux\include\DeckLinkAPIDiscovery.h
+2026-09-17 01:12:57.679   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.680   Installing the file.
+2026-09-17 01:12:57.682   Successfully installed the file.
+2026-09-17 01:12:57.682   -- File entry --
+2026-09-17 01:12:57.682   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Linux\include\DeckLinkAPIDispatch.cpp
+2026-09-17 01:12:57.683   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.683   Installing the file.
+2026-09-17 01:12:57.684   Successfully installed the file.
+2026-09-17 01:12:57.685   -- File entry --
+2026-09-17 01:12:57.685   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Linux\include\DeckLinkAPIDispatch_v10_8.cpp
+2026-09-17 01:12:57.685   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.685   Installing the file.
+2026-09-17 01:12:57.688   Successfully installed the file.
+2026-09-17 01:12:57.688   -- File entry --
+2026-09-17 01:12:57.688   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Linux\include\DeckLinkAPIDispatch_v7_6.cpp
+2026-09-17 01:12:57.689   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.689   Installing the file.
+2026-09-17 01:12:57.690   Successfully installed the file.
+2026-09-17 01:12:57.690   -- File entry --
+2026-09-17 01:12:57.691   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Linux\include\DeckLinkAPIDispatch_v8_0.cpp
+2026-09-17 01:12:57.691   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.691   Installing the file.
+2026-09-17 01:12:57.693   Successfully installed the file.
+2026-09-17 01:12:57.693   -- File entry --
+2026-09-17 01:12:57.693   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Linux\include\DeckLinkAPIModes.h
+2026-09-17 01:12:57.693   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.693   Installing the file.
+2026-09-17 01:12:57.696   Successfully installed the file.
+2026-09-17 01:12:57.696   -- File entry --
+2026-09-17 01:12:57.697   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Linux\include\DeckLinkAPITypes.h
+2026-09-17 01:12:57.697   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.697   Installing the file.
+2026-09-17 01:12:57.699   Successfully installed the file.
+2026-09-17 01:12:57.699   -- File entry --
+2026-09-17 01:12:57.699   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Linux\include\DeckLinkAPIVersion.h
+2026-09-17 01:12:57.699   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.699   Installing the file.
+2026-09-17 01:12:57.702   Successfully installed the file.
+2026-09-17 01:12:57.702   -- File entry --
+2026-09-17 01:12:57.702   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Linux\include\DeckLinkAPI_v10_2.h
+2026-09-17 01:12:57.702   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.702   Installing the file.
+2026-09-17 01:12:57.704   Successfully installed the file.
+2026-09-17 01:12:57.704   -- File entry --
+2026-09-17 01:12:57.704   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Linux\include\DeckLinkAPI_v10_4.h
+2026-09-17 01:12:57.704   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.704   Installing the file.
+2026-09-17 01:12:57.706   Successfully installed the file.
+2026-09-17 01:12:57.707   -- File entry --
+2026-09-17 01:12:57.707   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Linux\include\DeckLinkAPI_v10_5.h
+2026-09-17 01:12:57.707   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.707   Installing the file.
+2026-09-17 01:12:57.709   Successfully installed the file.
+2026-09-17 01:12:57.709   -- File entry --
+2026-09-17 01:12:57.709   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Linux\include\DeckLinkAPI_v10_6.h
+2026-09-17 01:12:57.709   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.710   Installing the file.
+2026-09-17 01:12:57.711   Successfully installed the file.
+2026-09-17 01:12:57.712   -- File entry --
+2026-09-17 01:12:57.712   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Linux\include\DeckLinkAPI_v10_9.h
+2026-09-17 01:12:57.712   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.713   Installing the file.
+2026-09-17 01:12:57.715   Successfully installed the file.
+2026-09-17 01:12:57.715   -- File entry --
+2026-09-17 01:12:57.715   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Linux\include\DeckLinkAPI_v7_1.h
+2026-09-17 01:12:57.715   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.715   Installing the file.
+2026-09-17 01:12:57.717   Successfully installed the file.
+2026-09-17 01:12:57.717   -- File entry --
+2026-09-17 01:12:57.717   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Linux\include\DeckLinkAPI_v7_3.h
+2026-09-17 01:12:57.717   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.717   Installing the file.
+2026-09-17 01:12:57.718   Successfully installed the file.
+2026-09-17 01:12:57.718   -- File entry --
+2026-09-17 01:12:57.719   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Linux\include\DeckLinkAPI_v7_6.h
+2026-09-17 01:12:57.719   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.719   Installing the file.
+2026-09-17 01:12:57.721   Successfully installed the file.
+2026-09-17 01:12:57.721   -- File entry --
+2026-09-17 01:12:57.721   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Linux\include\DeckLinkAPI_v7_9.h
+2026-09-17 01:12:57.721   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.721   Installing the file.
+2026-09-17 01:12:57.722   Successfully installed the file.
+2026-09-17 01:12:57.722   -- File entry --
+2026-09-17 01:12:57.723   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Linux\include\DeckLinkAPI_v8_0.h
+2026-09-17 01:12:57.723   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.723   Installing the file.
+2026-09-17 01:12:57.725   Successfully installed the file.
+2026-09-17 01:12:57.725   -- File entry --
+2026-09-17 01:12:57.726   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Linux\include\DeckLinkAPI_v8_1.h
+2026-09-17 01:12:57.726   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.726   Installing the file.
+2026-09-17 01:12:57.727   Successfully installed the file.
+2026-09-17 01:12:57.727   -- File entry --
+2026-09-17 01:12:57.728   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Linux\include\DeckLinkAPI_v9_2.h
+2026-09-17 01:12:57.728   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.728   Installing the file.
+2026-09-17 01:12:57.729   Successfully installed the file.
+2026-09-17 01:12:57.729   -- File entry --
+2026-09-17 01:12:57.729   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Linux\include\DeckLinkAPI_v9_9.h
+2026-09-17 01:12:57.730   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.730   Installing the file.
+2026-09-17 01:12:57.731   Successfully installed the file.
+2026-09-17 01:12:57.731   -- File entry --
+2026-09-17 01:12:57.732   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Linux\include\LinuxCOM.h
+2026-09-17 01:12:57.732   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.732   Installing the file.
+2026-09-17 01:12:57.733   Successfully installed the file.
+2026-09-17 01:12:57.733   -- File entry --
+2026-09-17 01:12:57.734   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Mac\include\DeckLinkAPI.h
+2026-09-17 01:12:57.734   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.734   Installing the file.
+2026-09-17 01:12:57.734   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Mac
+2026-09-17 01:12:57.735   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Mac\include
+2026-09-17 01:12:57.737   Successfully installed the file.
+2026-09-17 01:12:57.737   -- File entry --
+2026-09-17 01:12:57.737   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Mac\include\DeckLinkAPIConfiguration.h
+2026-09-17 01:12:57.737   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.737   Installing the file.
+2026-09-17 01:12:57.739   Successfully installed the file.
+2026-09-17 01:12:57.739   -- File entry --
+2026-09-17 01:12:57.739   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Mac\include\DeckLinkAPIConfiguration_v10_2.h
+2026-09-17 01:12:57.739   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.739   Installing the file.
+2026-09-17 01:12:57.742   Successfully installed the file.
+2026-09-17 01:12:57.742   -- File entry --
+2026-09-17 01:12:57.742   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Mac\include\DeckLinkAPIConfiguration_v10_4.h
+2026-09-17 01:12:57.742   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.743   Installing the file.
+2026-09-17 01:12:57.744   Successfully installed the file.
+2026-09-17 01:12:57.744   -- File entry --
+2026-09-17 01:12:57.744   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Mac\include\DeckLinkAPIConfiguration_v10_5.h
+2026-09-17 01:12:57.745   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.745   Installing the file.
+2026-09-17 01:12:57.746   Successfully installed the file.
+2026-09-17 01:12:57.746   -- File entry --
+2026-09-17 01:12:57.746   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Mac\include\DeckLinkAPIConfiguration_v10_9.h
+2026-09-17 01:12:57.747   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.747   Installing the file.
+2026-09-17 01:12:57.749   Successfully installed the file.
+2026-09-17 01:12:57.749   -- File entry --
+2026-09-17 01:12:57.749   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Mac\include\DeckLinkAPIDeckControl.h
+2026-09-17 01:12:57.749   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.749   Installing the file.
+2026-09-17 01:12:57.751   Successfully installed the file.
+2026-09-17 01:12:57.751   -- File entry --
+2026-09-17 01:12:57.751   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Mac\include\DeckLinkAPIDiscovery.h
+2026-09-17 01:12:57.751   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.751   Installing the file.
+2026-09-17 01:12:57.753   Successfully installed the file.
+2026-09-17 01:12:57.753   -- File entry --
+2026-09-17 01:12:57.753   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Mac\include\DeckLinkAPIDispatch.cpp
+2026-09-17 01:12:57.754   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.754   Installing the file.
+2026-09-17 01:12:57.756   Successfully installed the file.
+2026-09-17 01:12:57.756   -- File entry --
+2026-09-17 01:12:57.756   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Mac\include\DeckLinkAPIDispatch_v10_8.cpp
+2026-09-17 01:12:57.756   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.756   Installing the file.
+2026-09-17 01:12:57.757   Successfully installed the file.
+2026-09-17 01:12:57.758   -- File entry --
+2026-09-17 01:12:57.758   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Mac\include\DeckLinkAPIDispatch_v7_6.cpp
+2026-09-17 01:12:57.758   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.758   Installing the file.
+2026-09-17 01:12:57.760   Successfully installed the file.
+2026-09-17 01:12:57.760   -- File entry --
+2026-09-17 01:12:57.760   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Mac\include\DeckLinkAPIDispatch_v8_0.cpp
+2026-09-17 01:12:57.761   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.761   Installing the file.
+2026-09-17 01:12:57.762   Successfully installed the file.
+2026-09-17 01:12:57.762   -- File entry --
+2026-09-17 01:12:57.763   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Mac\include\DeckLinkAPIModes.h
+2026-09-17 01:12:57.763   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.763   Installing the file.
+2026-09-17 01:12:57.764   Successfully installed the file.
+2026-09-17 01:12:57.764   -- File entry --
+2026-09-17 01:12:57.764   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Mac\include\DeckLinkAPIStreaming.h
+2026-09-17 01:12:57.765   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.765   Installing the file.
+2026-09-17 01:12:57.767   Successfully installed the file.
+2026-09-17 01:12:57.767   -- File entry --
+2026-09-17 01:12:57.767   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Mac\include\DeckLinkAPITypes.h
+2026-09-17 01:12:57.768   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.768   Installing the file.
+2026-09-17 01:12:57.769   Successfully installed the file.
+2026-09-17 01:12:57.769   -- File entry --
+2026-09-17 01:12:57.769   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Mac\include\DeckLinkAPIVersion.h
+2026-09-17 01:12:57.769   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.769   Installing the file.
+2026-09-17 01:12:57.771   Successfully installed the file.
+2026-09-17 01:12:57.771   -- File entry --
+2026-09-17 01:12:57.771   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Mac\include\DeckLinkAPI_v10_2.h
+2026-09-17 01:12:57.771   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.771   Installing the file.
+2026-09-17 01:12:57.773   Successfully installed the file.
+2026-09-17 01:12:57.773   -- File entry --
+2026-09-17 01:12:57.773   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Mac\include\DeckLinkAPI_v10_4.h
+2026-09-17 01:12:57.773   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.773   Installing the file.
+2026-09-17 01:12:57.775   Successfully installed the file.
+2026-09-17 01:12:57.775   -- File entry --
+2026-09-17 01:12:57.775   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Mac\include\DeckLinkAPI_v10_5.h
+2026-09-17 01:12:57.775   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.775   Installing the file.
+2026-09-17 01:12:57.776   Successfully installed the file.
+2026-09-17 01:12:57.776   -- File entry --
+2026-09-17 01:12:57.777   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Mac\include\DeckLinkAPI_v10_6.h
+2026-09-17 01:12:57.777   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.777   Installing the file.
+2026-09-17 01:12:57.779   Successfully installed the file.
+2026-09-17 01:12:57.779   -- File entry --
+2026-09-17 01:12:57.779   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Mac\include\DeckLinkAPI_v10_9.h
+2026-09-17 01:12:57.779   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.779   Installing the file.
+2026-09-17 01:12:57.780   Successfully installed the file.
+2026-09-17 01:12:57.780   -- File entry --
+2026-09-17 01:12:57.781   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Mac\include\DeckLinkAPI_v7_1.h
+2026-09-17 01:12:57.781   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.781   Installing the file.
+2026-09-17 01:12:57.782   Successfully installed the file.
+2026-09-17 01:12:57.782   -- File entry --
+2026-09-17 01:12:57.782   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Mac\include\DeckLinkAPI_v7_3.h
+2026-09-17 01:12:57.782   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.782   Installing the file.
+2026-09-17 01:12:57.785   Successfully installed the file.
+2026-09-17 01:12:57.785   -- File entry --
+2026-09-17 01:12:57.785   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Mac\include\DeckLinkAPI_v7_6.h
+2026-09-17 01:12:57.785   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.785   Installing the file.
+2026-09-17 01:12:57.787   Successfully installed the file.
+2026-09-17 01:12:57.787   -- File entry --
+2026-09-17 01:12:57.787   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Mac\include\DeckLinkAPI_v7_9.h
+2026-09-17 01:12:57.788   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.788   Installing the file.
+2026-09-17 01:12:57.789   Successfully installed the file.
+2026-09-17 01:12:57.789   -- File entry --
+2026-09-17 01:12:57.789   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Mac\include\DeckLinkAPI_v8_0.h
+2026-09-17 01:12:57.789   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.789   Installing the file.
+2026-09-17 01:12:57.791   Successfully installed the file.
+2026-09-17 01:12:57.791   -- File entry --
+2026-09-17 01:12:57.791   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Mac\include\DeckLinkAPI_v8_1.h
+2026-09-17 01:12:57.791   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.791   Installing the file.
+2026-09-17 01:12:57.793   Successfully installed the file.
+2026-09-17 01:12:57.793   -- File entry --
+2026-09-17 01:12:57.793   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Mac\include\DeckLinkAPI_v9_2.h
+2026-09-17 01:12:57.793   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.793   Installing the file.
+2026-09-17 01:12:57.795   Successfully installed the file.
+2026-09-17 01:12:57.795   -- File entry --
+2026-09-17 01:12:57.795   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Mac\include\DeckLinkAPI_v9_9.h
+2026-09-17 01:12:57.795   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.795   Installing the file.
+2026-09-17 01:12:57.796   Successfully installed the file.
+2026-09-17 01:12:57.796   -- File entry --
+2026-09-17 01:12:57.797   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Win\include\DeckLinkAPI.idl
+2026-09-17 01:12:57.797   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.797   Installing the file.
+2026-09-17 01:12:57.797   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Win
+2026-09-17 01:12:57.798   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Win\include
+2026-09-17 01:12:57.799   Successfully installed the file.
+2026-09-17 01:12:57.799   -- File entry --
+2026-09-17 01:12:57.800   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Win\include\DeckLinkAPIConfiguration.idl
+2026-09-17 01:12:57.800   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.800   Installing the file.
+2026-09-17 01:12:57.801   Successfully installed the file.
+2026-09-17 01:12:57.801   -- File entry --
+2026-09-17 01:12:57.802   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Win\include\DeckLinkAPIDeckControl.idl
+2026-09-17 01:12:57.802   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.802   Installing the file.
+2026-09-17 01:12:57.804   Successfully installed the file.
+2026-09-17 01:12:57.804   -- File entry --
+2026-09-17 01:12:57.804   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Win\include\DeckLinkAPIDiscovery.idl
+2026-09-17 01:12:57.804   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.804   Installing the file.
+2026-09-17 01:12:57.806   Successfully installed the file.
+2026-09-17 01:12:57.806   -- File entry --
+2026-09-17 01:12:57.806   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Win\include\DeckLinkAPIModes.idl
+2026-09-17 01:12:57.806   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.807   Installing the file.
+2026-09-17 01:12:57.808   Successfully installed the file.
+2026-09-17 01:12:57.808   -- File entry --
+2026-09-17 01:12:57.809   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Win\include\DeckLinkAPIStreaming.idl
+2026-09-17 01:12:57.809   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.809   Installing the file.
+2026-09-17 01:12:57.811   Successfully installed the file.
+2026-09-17 01:12:57.811   -- File entry --
+2026-09-17 01:12:57.812   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Win\include\DeckLinkAPIStreaming_v10_8.idl
+2026-09-17 01:12:57.812   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.812   Installing the file.
+2026-09-17 01:12:57.814   Successfully installed the file.
+2026-09-17 01:12:57.814   -- File entry --
+2026-09-17 01:12:57.814   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Win\include\DeckLinkAPITypes.idl
+2026-09-17 01:12:57.815   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.815   Installing the file.
+2026-09-17 01:12:57.817   Successfully installed the file.
+2026-09-17 01:12:57.817   -- File entry --
+2026-09-17 01:12:57.818   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Win\include\DeckLinkAPIVersion.h
+2026-09-17 01:12:57.818   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.818   Installing the file.
+2026-09-17 01:12:57.821   Successfully installed the file.
+2026-09-17 01:12:57.821   -- File entry --
+2026-09-17 01:12:57.821   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Win\include\DeckLinkAPI_v10_2.idl
+2026-09-17 01:12:57.821   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.821   Installing the file.
+2026-09-17 01:12:57.823   Successfully installed the file.
+2026-09-17 01:12:57.823   -- File entry --
+2026-09-17 01:12:57.823   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Win\include\DeckLinkAPI_v10_4.idl
+2026-09-17 01:12:57.823   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.823   Installing the file.
+2026-09-17 01:12:57.825   Successfully installed the file.
+2026-09-17 01:12:57.825   -- File entry --
+2026-09-17 01:12:57.825   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Win\include\DeckLinkAPI_v10_5.idl
+2026-09-17 01:12:57.826   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.826   Installing the file.
+2026-09-17 01:12:57.826   Successfully installed the file.
+2026-09-17 01:12:57.826   -- File entry --
+2026-09-17 01:12:57.827   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Win\include\DeckLinkAPI_v10_6.idl
+2026-09-17 01:12:57.827   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.827   Installing the file.
+2026-09-17 01:12:57.828   Successfully installed the file.
+2026-09-17 01:12:57.829   -- File entry --
+2026-09-17 01:12:57.829   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Win\include\DeckLinkAPI_v10_8.idl
+2026-09-17 01:12:57.829   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.829   Installing the file.
+2026-09-17 01:12:57.831   Successfully installed the file.
+2026-09-17 01:12:57.831   -- File entry --
+2026-09-17 01:12:57.831   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Win\include\DeckLinkAPI_v10_9.idl
+2026-09-17 01:12:57.832   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.832   Installing the file.
+2026-09-17 01:12:57.835   Successfully installed the file.
+2026-09-17 01:12:57.835   -- File entry --
+2026-09-17 01:12:57.836   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Win\include\DeckLinkAPI_v7_1.idl
+2026-09-17 01:12:57.837   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.837   Installing the file.
+2026-09-17 01:12:57.839   Successfully installed the file.
+2026-09-17 01:12:57.839   -- File entry --
+2026-09-17 01:12:57.839   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Win\include\DeckLinkAPI_v7_3.idl
+2026-09-17 01:12:57.840   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.840   Installing the file.
+2026-09-17 01:12:57.842   Successfully installed the file.
+2026-09-17 01:12:57.842   -- File entry --
+2026-09-17 01:12:57.842   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Win\include\DeckLinkAPI_v7_6.idl
+2026-09-17 01:12:57.842   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.842   Installing the file.
+2026-09-17 01:12:57.844   Successfully installed the file.
+2026-09-17 01:12:57.844   -- File entry --
+2026-09-17 01:12:57.844   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Win\include\DeckLinkAPI_v7_9.idl
+2026-09-17 01:12:57.845   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.845   Installing the file.
+2026-09-17 01:12:57.846   Successfully installed the file.
+2026-09-17 01:12:57.847   -- File entry --
+2026-09-17 01:12:57.847   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Win\include\DeckLinkAPI_v8_0.idl
+2026-09-17 01:12:57.847   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.847   Installing the file.
+2026-09-17 01:12:57.848   Successfully installed the file.
+2026-09-17 01:12:57.848   -- File entry --
+2026-09-17 01:12:57.849   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Win\include\DeckLinkAPI_v8_1.idl
+2026-09-17 01:12:57.849   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.849   Installing the file.
+2026-09-17 01:12:57.850   Successfully installed the file.
+2026-09-17 01:12:57.850   -- File entry --
+2026-09-17 01:12:57.850   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Win\include\DeckLinkAPI_v9_2.idl
+2026-09-17 01:12:57.851   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.851   Installing the file.
+2026-09-17 01:12:57.852   Successfully installed the file.
+2026-09-17 01:12:57.853   -- File entry --
+2026-09-17 01:12:57.853   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_BMD\BMDSDK\Win\include\DeckLinkAPI_v9_9.idl
+2026-09-17 01:12:57.853   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.853   Installing the file.
+2026-09-17 01:12:57.855   Successfully installed the file.
+2026-09-17 01:12:57.855   -- File entry --
+2026-09-17 01:12:57.855   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Capabilities\NDIlib_Send_Capabilities.cpp
+2026-09-17 01:12:57.856   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.856   Installing the file.
+2026-09-17 01:12:57.856   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Capabilities
+2026-09-17 01:12:57.858   Successfully installed the file.
+2026-09-17 01:12:57.858   -- File entry --
+2026-09-17 01:12:57.858   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Capabilities\NDIlib_Send_Capabilities.vcxproj
+2026-09-17 01:12:57.858   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.858   Installing the file.
+2026-09-17 01:12:57.860   Successfully installed the file.
+2026-09-17 01:12:57.860   -- File entry --
+2026-09-17 01:12:57.861   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Latency\NDIlib_Send_Latency.cpp
+2026-09-17 01:12:57.861   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.861   Installing the file.
+2026-09-17 01:12:57.861   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Latency
+2026-09-17 01:12:57.863   Successfully installed the file.
+2026-09-17 01:12:57.864   -- File entry --
+2026-09-17 01:12:57.864   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Latency\NDIlib_Send_Latency.vcxproj
+2026-09-17 01:12:57.864   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.864   Installing the file.
+2026-09-17 01:12:57.866   Successfully installed the file.
+2026-09-17 01:12:57.866   -- File entry --
+2026-09-17 01:12:57.866   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Listener\NDIlib_Send_Listener.cpp
+2026-09-17 01:12:57.867   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.867   Installing the file.
+2026-09-17 01:12:57.868   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Listener
+2026-09-17 01:12:57.869   Successfully installed the file.
+2026-09-17 01:12:57.869   -- File entry --
+2026-09-17 01:12:57.869   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Listener\NDIlib_Send_Listener.vcxproj
+2026-09-17 01:12:57.870   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.870   Installing the file.
+2026-09-17 01:12:57.871   Successfully installed the file.
+2026-09-17 01:12:57.871   -- File entry --
+2026-09-17 01:12:57.872   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Listener\NDIlib_Send_Listener.vcxproj.filters
+2026-09-17 01:12:57.872   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.872   Installing the file.
+2026-09-17 01:12:57.874   Successfully installed the file.
+2026-09-17 01:12:57.874   -- File entry --
+2026-09-17 01:12:57.874   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Listener_Advanced\NDIlib_Send_Listener_Advanced.cpp
+2026-09-17 01:12:57.875   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.875   Installing the file.
+2026-09-17 01:12:57.875   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Listener_Advanced
+2026-09-17 01:12:57.877   Successfully installed the file.
+2026-09-17 01:12:57.877   -- File entry --
+2026-09-17 01:12:57.877   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Listener_Advanced\NDIlib_Send_Listener_Advanced.vcxproj
+2026-09-17 01:12:57.878   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.878   Installing the file.
+2026-09-17 01:12:57.880   Successfully installed the file.
+2026-09-17 01:12:57.880   -- File entry --
+2026-09-17 01:12:57.880   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_PNG\NDIlib_Send_PNG.cpp
+2026-09-17 01:12:57.880   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.881   Installing the file.
+2026-09-17 01:12:57.881   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_PNG
+2026-09-17 01:12:57.883   Successfully installed the file.
+2026-09-17 01:12:57.883   -- File entry --
+2026-09-17 01:12:57.883   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_PNG\NDIlib_Send_PNG.vcxproj
+2026-09-17 01:12:57.884   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.884   Installing the file.
+2026-09-17 01:12:57.886   Successfully installed the file.
+2026-09-17 01:12:57.886   -- File entry --
+2026-09-17 01:12:57.886   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Video\NDIlib_Send_Video.cpp
+2026-09-17 01:12:57.887   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.887   Installing the file.
+2026-09-17 01:12:57.887   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Video
+2026-09-17 01:12:57.889   Successfully installed the file.
+2026-09-17 01:12:57.889   -- File entry --
+2026-09-17 01:12:57.890   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Video\NDIlib_Send_Video.vcxproj
+2026-09-17 01:12:57.890   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.890   Installing the file.
+2026-09-17 01:12:57.891   Successfully installed the file.
+2026-09-17 01:12:57.891   -- File entry --
+2026-09-17 01:12:57.892   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Video_Advanced\NDIlib_Send_Video_Advanced.cpp
+2026-09-17 01:12:57.892   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.892   Installing the file.
+2026-09-17 01:12:57.892   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Video_Advanced
+2026-09-17 01:12:57.895   Successfully installed the file.
+2026-09-17 01:12:57.895   -- File entry --
+2026-09-17 01:12:57.895   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Video_Advanced\NDIlib_Send_Video_Advanced.vcxproj
+2026-09-17 01:12:57.896   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.896   Installing the file.
+2026-09-17 01:12:57.897   Successfully installed the file.
+2026-09-17 01:12:57.897   -- File entry --
+2026-09-17 01:12:57.897   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Video_and_Audio\NDIlib_Send_Video_and_Audio.cpp
+2026-09-17 01:12:57.898   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.898   Installing the file.
+2026-09-17 01:12:57.898   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Video_and_Audio
+2026-09-17 01:12:57.899   Successfully installed the file.
+2026-09-17 01:12:57.899   -- File entry --
+2026-09-17 01:12:57.900   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Video_and_Audio\NDIlib_Send_Video_and_Audio.vcxproj
+2026-09-17 01:12:57.900   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.900   Installing the file.
+2026-09-17 01:12:57.902   Successfully installed the file.
+2026-09-17 01:12:57.902   -- File entry --
+2026-09-17 01:12:57.902   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Video_Async\NDIlib_Send_Video_Async.cpp
+2026-09-17 01:12:57.902   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.902   Installing the file.
+2026-09-17 01:12:57.903   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Video_Async
+2026-09-17 01:12:57.904   Successfully installed the file.
+2026-09-17 01:12:57.904   -- File entry --
+2026-09-17 01:12:57.905   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Video_Async\NDIlib_Send_Video_Async.vcxproj
+2026-09-17 01:12:57.905   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.905   Installing the file.
+2026-09-17 01:12:57.907   Successfully installed the file.
+2026-09-17 01:12:57.907   -- File entry --
+2026-09-17 01:12:57.907   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_VirtualPTZ\NDIlib_Send_VirtualPTZ.cpp
+2026-09-17 01:12:57.908   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.908   Installing the file.
+2026-09-17 01:12:57.908   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_VirtualPTZ
+2026-09-17 01:12:57.910   Successfully installed the file.
+2026-09-17 01:12:57.910   -- File entry --
+2026-09-17 01:12:57.911   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_VirtualPTZ\NDIlib_Send_VirtualPTZ.vcxproj
+2026-09-17 01:12:57.911   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.911   Installing the file.
+2026-09-17 01:12:57.913   Successfully installed the file.
+2026-09-17 01:12:57.913   -- File entry --
+2026-09-17 01:12:57.913   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Win32\NDIlib_Send_Win32.cpp
+2026-09-17 01:12:57.913   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.913   Installing the file.
+2026-09-17 01:12:57.914   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Win32
+2026-09-17 01:12:57.915   Successfully installed the file.
+2026-09-17 01:12:57.915   -- File entry --
+2026-09-17 01:12:57.915   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Win32\NDIlib_Send_Win32.vcxproj
+2026-09-17 01:12:57.915   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.915   Installing the file.
+2026-09-17 01:12:57.918   Successfully installed the file.
+2026-09-17 01:12:57.918   -- File entry --
+2026-09-17 01:12:57.918   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Win32\ndi_win32.cpp
+2026-09-17 01:12:57.918   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.918   Installing the file.
+2026-09-17 01:12:57.920   Successfully installed the file.
+2026-09-17 01:12:57.920   -- File entry --
+2026-09-17 01:12:57.920   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Win32\ndi_win32.h
+2026-09-17 01:12:57.921   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.921   Installing the file.
+2026-09-17 01:12:57.922   Successfully installed the file.
+2026-09-17 01:12:57.922   -- File entry --
+2026-09-17 01:12:57.922   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Win32\stdafx.cpp
+2026-09-17 01:12:57.923   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.923   Installing the file.
+2026-09-17 01:12:57.924   Successfully installed the file.
+2026-09-17 01:12:57.924   -- File entry --
+2026-09-17 01:12:57.924   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Win32\stdafx.h
+2026-09-17 01:12:57.925   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.925   Installing the file.
+2026-09-17 01:12:57.926   Successfully installed the file.
+2026-09-17 01:12:57.926   -- File entry --
+2026-09-17 01:12:57.926   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Send_Win32\targetver.h
+2026-09-17 01:12:57.927   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.927   Installing the file.
+2026-09-17 01:12:57.928   Successfully installed the file.
+2026-09-17 01:12:57.928   -- File entry --
+2026-09-17 01:12:57.928   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Tally_Echo\NDIlib_Tally_Echo.cpp
+2026-09-17 01:12:57.929   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.929   Installing the file.
+2026-09-17 01:12:57.929   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Tally_Echo
+2026-09-17 01:12:57.931   Successfully installed the file.
+2026-09-17 01:12:57.931   -- File entry --
+2026-09-17 01:12:57.931   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\NDIlib_Tally_Echo\NDIlib_Tally_Echo.vcxproj
+2026-09-17 01:12:57.931   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.931   Installing the file.
+2026-09-17 01:12:57.932   Successfully installed the file.
+2026-09-17 01:12:57.932   -- File entry --
+2026-09-17 01:12:57.932   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\ThirdParty\lodepng-LICENSE
+2026-09-17 01:12:57.934   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.934   Installing the file.
+2026-09-17 01:12:57.934   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\ThirdParty
+2026-09-17 01:12:57.936   Successfully installed the file.
+2026-09-17 01:12:57.936   -- File entry --
+2026-09-17 01:12:57.936   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\ThirdParty\lodepng.cpp
+2026-09-17 01:12:57.936   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.936   Installing the file.
+2026-09-17 01:12:57.944   Successfully installed the file.
+2026-09-17 01:12:57.944   -- File entry --
+2026-09-17 01:12:57.944   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\ThirdParty\lodepng.h
+2026-09-17 01:12:57.945   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.945   Installing the file.
+2026-09-17 01:12:57.949   Successfully installed the file.
+2026-09-17 01:12:57.949   -- File entry --
+2026-09-17 01:12:57.950   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\ThirdParty\miniaudio.h
+2026-09-17 01:12:57.950   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:57.950   Installing the file.
+2026-09-17 01:12:58.005   Successfully installed the file.
+2026-09-17 01:12:58.005   -- File entry --
+2026-09-17 01:12:58.006   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\ThirdParty\picopng.hpp
+2026-09-17 01:12:58.006   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:58.006   Installing the file.
+2026-09-17 01:12:58.008   Successfully installed the file.
+2026-09-17 01:12:58.008   -- File entry --
+2026-09-17 01:12:58.008   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\ThirdParty\rapidxml.hpp
+2026-09-17 01:12:58.008   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:58.008   Installing the file.
+2026-09-17 01:12:58.012   Successfully installed the file.
+2026-09-17 01:12:58.012   -- File entry --
+2026-09-17 01:12:58.012   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Examples\C++\ThirdParty\rapidxml_print.hpp
+2026-09-17 01:12:58.012   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:58.012   Installing the file.
+2026-09-17 01:12:58.014   Successfully installed the file.
+2026-09-17 01:12:58.014   -- File entry --
+2026-09-17 01:12:58.014   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Include\Processing.NDI.compat.h
+2026-09-17 01:12:58.014   Time stamp of our file: 2026-04-10 09:05:04.000
+2026-09-17 01:12:58.014   Installing the file.
+2026-09-17 01:12:58.014   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Include
+2026-09-17 01:12:58.017   Successfully installed the file.
+2026-09-17 01:12:58.017   -- File entry --
+2026-09-17 01:12:58.017   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Include\Processing.NDI.deprecated.h
+2026-09-17 01:12:58.017   Time stamp of our file: 2026-04-10 09:05:04.000
+2026-09-17 01:12:58.017   Installing the file.
+2026-09-17 01:12:58.019   Successfully installed the file.
+2026-09-17 01:12:58.019   -- File entry --
+2026-09-17 01:12:58.019   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Include\Processing.NDI.DynamicLoad.h
+2026-09-17 01:12:58.020   Time stamp of our file: 2026-04-10 09:05:04.000
+2026-09-17 01:12:58.020   Installing the file.
+2026-09-17 01:12:58.022   Successfully installed the file.
+2026-09-17 01:12:58.022   -- File entry --
+2026-09-17 01:12:58.023   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Include\Processing.NDI.Find.h
+2026-09-17 01:12:58.023   Time stamp of our file: 2026-04-10 09:05:04.000
+2026-09-17 01:12:58.023   Installing the file.
+2026-09-17 01:12:58.024   Successfully installed the file.
+2026-09-17 01:12:58.024   -- File entry --
+2026-09-17 01:12:58.024   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Include\Processing.NDI.FrameSync.h
+2026-09-17 01:12:58.025   Time stamp of our file: 2026-04-10 09:05:04.000
+2026-09-17 01:12:58.025   Installing the file.
+2026-09-17 01:12:58.026   Successfully installed the file.
+2026-09-17 01:12:58.026   -- File entry --
+2026-09-17 01:12:58.026   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Include\Processing.NDI.Lib.cplusplus.h
+2026-09-17 01:12:58.026   Time stamp of our file: 2026-04-10 09:05:04.000
+2026-09-17 01:12:58.026   Installing the file.
+2026-09-17 01:12:58.028   Successfully installed the file.
+2026-09-17 01:12:58.028   -- File entry --
+2026-09-17 01:12:58.028   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Include\Processing.NDI.Lib.h
+2026-09-17 01:12:58.029   Time stamp of our file: 2026-04-10 09:05:04.000
+2026-09-17 01:12:58.029   Installing the file.
+2026-09-17 01:12:58.030   Successfully installed the file.
+2026-09-17 01:12:58.030   -- File entry --
+2026-09-17 01:12:58.031   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Include\Processing.NDI.Recv.ex.h
+2026-09-17 01:12:58.031   Time stamp of our file: 2026-04-10 09:05:04.000
+2026-09-17 01:12:58.031   Installing the file.
+2026-09-17 01:12:58.034   Successfully installed the file.
+2026-09-17 01:12:58.034   -- File entry --
+2026-09-17 01:12:58.034   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Include\Processing.NDI.Recv.h
+2026-09-17 01:12:58.034   Time stamp of our file: 2026-04-10 09:05:04.000
+2026-09-17 01:12:58.034   Installing the file.
+2026-09-17 01:12:58.036   Successfully installed the file.
+2026-09-17 01:12:58.037   -- File entry --
+2026-09-17 01:12:58.037   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Include\Processing.NDI.RecvAdvertiser.h
+2026-09-17 01:12:58.037   Time stamp of our file: 2026-04-10 09:05:04.000
+2026-09-17 01:12:58.037   Installing the file.
+2026-09-17 01:12:58.038   Successfully installed the file.
+2026-09-17 01:12:58.039   -- File entry --
+2026-09-17 01:12:58.039   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Include\Processing.NDI.RecvListener.h
+2026-09-17 01:12:58.039   Time stamp of our file: 2026-04-10 09:05:04.000
+2026-09-17 01:12:58.039   Installing the file.
+2026-09-17 01:12:58.041   Successfully installed the file.
+2026-09-17 01:12:58.041   -- File entry --
+2026-09-17 01:12:58.041   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Include\Processing.NDI.Routing.h
+2026-09-17 01:12:58.041   Time stamp of our file: 2026-04-10 09:05:04.000
+2026-09-17 01:12:58.041   Installing the file.
+2026-09-17 01:12:58.043   Successfully installed the file.
+2026-09-17 01:12:58.043   -- File entry --
+2026-09-17 01:12:58.043   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Include\Processing.NDI.Send.h
+2026-09-17 01:12:58.043   Time stamp of our file: 2026-04-10 09:05:04.000
+2026-09-17 01:12:58.043   Installing the file.
+2026-09-17 01:12:58.045   Successfully installed the file.
+2026-09-17 01:12:58.045   -- File entry --
+2026-09-17 01:12:58.045   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Include\Processing.NDI.SendAdvertiser.h
+2026-09-17 01:12:58.045   Time stamp of our file: 2026-04-10 09:05:04.000
+2026-09-17 01:12:58.045   Installing the file.
+2026-09-17 01:12:58.047   Successfully installed the file.
+2026-09-17 01:12:58.047   -- File entry --
+2026-09-17 01:12:58.048   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Include\Processing.NDI.SendListener.h
+2026-09-17 01:12:58.048   Time stamp of our file: 2026-04-10 09:05:04.000
+2026-09-17 01:12:58.048   Installing the file.
+2026-09-17 01:12:58.049   Successfully installed the file.
+2026-09-17 01:12:58.049   -- File entry --
+2026-09-17 01:12:58.049   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Include\Processing.NDI.structs.h
+2026-09-17 01:12:58.049   Time stamp of our file: 2026-04-10 09:05:04.000
+2026-09-17 01:12:58.049   Installing the file.
+2026-09-17 01:12:58.051   Successfully installed the file.
+2026-09-17 01:12:58.051   -- File entry --
+2026-09-17 01:12:58.051   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Include\Processing.NDI.utilities.h
+2026-09-17 01:12:58.052   Time stamp of our file: 2026-04-10 09:05:04.000
+2026-09-17 01:12:58.052   Installing the file.
+2026-09-17 01:12:58.053   Successfully installed the file.
+2026-09-17 01:12:58.053   -- File entry --
+2026-09-17 01:12:58.054   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Lib\arm64-v8a\libndi.so
+2026-09-17 01:12:58.054   Time stamp of our file: 2026-04-14 17:20:54.000
+2026-09-17 01:12:58.054   Installing the file.
+2026-09-17 01:12:58.054   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Lib
+2026-09-17 01:12:58.055   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Lib\arm64-v8a
+2026-09-17 01:12:58.205   Successfully installed the file.
+2026-09-17 01:12:58.205   -- File entry --
+2026-09-17 01:12:58.205   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Lib\arm64-v8a\libndi_bonjour_license.txt
+2026-09-17 01:12:58.206   Time stamp of our file: 2026-04-10 09:05:00.000
+2026-09-17 01:12:58.206   Installing the file.
+2026-09-17 01:12:58.207   Successfully installed the file.
+2026-09-17 01:12:58.207   -- File entry --
+2026-09-17 01:12:58.207   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Lib\arm64-v8a\libndi_licenses.txt
+2026-09-17 01:12:58.207   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:58.207   Installing the file.
+2026-09-17 01:12:58.209   Successfully installed the file.
+2026-09-17 01:12:58.209   -- File entry --
+2026-09-17 01:12:58.209   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Lib\armeabi-v7a\libndi.so
+2026-09-17 01:12:58.210   Time stamp of our file: 2026-04-14 17:20:54.000
+2026-09-17 01:12:58.210   Installing the file.
+2026-09-17 01:12:58.210   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Lib\armeabi-v7a
+2026-09-17 01:12:58.327   Successfully installed the file.
+2026-09-17 01:12:58.327   -- File entry --
+2026-09-17 01:12:58.327   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Lib\armeabi-v7a\libndi_bonjour_license.txt
+2026-09-17 01:12:58.327   Time stamp of our file: 2026-04-10 09:05:00.000
+2026-09-17 01:12:58.327   Installing the file.
+2026-09-17 01:12:58.328   Successfully installed the file.
+2026-09-17 01:12:58.328   -- File entry --
+2026-09-17 01:12:58.328   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Lib\armeabi-v7a\libndi_licenses.txt
+2026-09-17 01:12:58.329   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:58.329   Installing the file.
+2026-09-17 01:12:58.332   Successfully installed the file.
+2026-09-17 01:12:58.332   -- File entry --
+2026-09-17 01:12:58.332   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Lib\x86\libndi.so
+2026-09-17 01:12:58.332   Time stamp of our file: 2026-04-14 17:20:54.000
+2026-09-17 01:12:58.332   Installing the file.
+2026-09-17 01:12:58.332   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Lib\x86
+2026-09-17 01:12:58.477   Successfully installed the file.
+2026-09-17 01:12:58.477   -- File entry --
+2026-09-17 01:12:58.478   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Lib\x86\libndi_bonjour_license.txt
+2026-09-17 01:12:58.478   Time stamp of our file: 2026-04-10 09:05:00.000
+2026-09-17 01:12:58.478   Installing the file.
+2026-09-17 01:12:58.479   Successfully installed the file.
+2026-09-17 01:12:58.479   -- File entry --
+2026-09-17 01:12:58.479   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Lib\x86\libndi_licenses.txt
+2026-09-17 01:12:58.480   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:58.480   Installing the file.
+2026-09-17 01:12:58.481   Successfully installed the file.
+2026-09-17 01:12:58.481   -- File entry --
+2026-09-17 01:12:58.481   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Lib\x86_64\libndi.so
+2026-09-17 01:12:58.481   Time stamp of our file: 2026-04-14 17:20:54.000
+2026-09-17 01:12:58.481   Installing the file.
+2026-09-17 01:12:58.481   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Lib\x86_64
+2026-09-17 01:12:58.782   Successfully installed the file.
+2026-09-17 01:12:58.782   -- File entry --
+2026-09-17 01:12:58.782   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Lib\x86_64\libndi_bonjour_license.txt
+2026-09-17 01:12:58.782   Time stamp of our file: 2026-04-10 09:05:00.000
+2026-09-17 01:12:58.782   Installing the file.
+2026-09-17 01:12:58.783   Successfully installed the file.
+2026-09-17 01:12:58.783   -- File entry --
+2026-09-17 01:12:58.783   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Lib\x86_64\libndi_licenses.txt
+2026-09-17 01:12:58.785   Time stamp of our file: 2026-04-10 09:04:04.000
+2026-09-17 01:12:58.785   Installing the file.
+2026-09-17 01:12:58.787   Successfully installed the file.
+2026-09-17 01:12:58.787   -- File entry --
+2026-09-17 01:12:58.787   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\NDI SDK License Agreement.pdf
+2026-09-17 01:12:58.787   Time stamp of our file: 2026-04-10 09:03:58.000
+2026-09-17 01:12:58.787   Installing the file.
+2026-09-17 01:12:58.799   Successfully installed the file.
+2026-09-17 01:12:58.800   -- File entry --
+2026-09-17 01:12:58.800   Dest filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Redist\NDI 6 Runtime.exe
+2026-09-17 01:12:58.800   Time stamp of our file: 2026-04-14 17:22:04.000
+2026-09-17 01:12:58.800   Installing the file.
+2026-09-17 01:12:58.800   Creating directory: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Redist
+2026-09-17 01:12:58.848   Successfully installed the file.
+2026-09-17 01:12:58.848   -- Icon entry --
+2026-09-17 01:12:58.848   Dest filename: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\NDI 6 SDK (Android)\License Agreement.lnk
+2026-09-17 01:12:58.848   Creating directory: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\NDI 6 SDK (Android)
+2026-09-17 01:12:58.857   Creating the icon.
+2026-09-17 01:12:58.938   Successfully created the icon.
+2026-09-17 01:12:58.946   -- Icon entry --
+2026-09-17 01:12:58.946   Dest filename: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\NDI 6 SDK (Android)\NDI.video.lnk
+2026-09-17 01:12:58.946   Creating the icon.
+2026-09-17 01:12:58.953   Successfully created the icon.
+2026-09-17 01:12:58.963   -- Icon entry --
+2026-09-17 01:12:58.963   Dest filename: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\NDI 6 SDK (Android)\NDI SDK Documentation.lnk
+2026-09-17 01:12:58.964   Creating the icon.
+2026-09-17 01:12:58.974   Successfully created the icon.
+2026-09-17 01:12:58.983   -- Icon entry --
+2026-09-17 01:12:58.983   Dest filename: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\NDI 6 SDK (Android)\Introduction to NDI SDK.lnk
+2026-09-17 01:12:58.984   Creating the icon.
+2026-09-17 01:12:58.991   Successfully created the icon.
+2026-09-17 01:12:59.002   -- Icon entry --
+2026-09-17 01:12:59.002   Dest filename: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\NDI 6 SDK (Android)\SDK Files.lnk
+2026-09-17 01:12:59.003   Creating the icon.
+2026-09-17 01:12:59.009   Successfully created the icon.
+2026-09-17 01:12:59.018   -- Icon entry --
+2026-09-17 01:12:59.018   Dest filename: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\NDI 6 SDK (Android)\Uninstall.lnk
+2026-09-17 01:12:59.019   Creating the icon.
+2026-09-17 01:12:59.027   Successfully created the icon.
+2026-09-17 01:12:59.039   Saving uninstall information.
+2026-09-17 01:12:59.039   Creating new uninstall key: HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall\{BC597539-A616-4E7A-98BB-02D2159A99F7}_is1
+2026-09-17 01:12:59.039   Writing uninstall key values.
+2026-09-17 01:12:59.042   Detected previous non administrative install? No
+2026-09-17 01:12:59.042   Detected previous administrative 32-bit install? No
+2026-09-17 01:12:59.050   Installation process succeeded.
+2026-09-17 01:12:59.056   -- Run entry --
+2026-09-17 01:12:59.056   Run as: Current user
+2026-09-17 01:12:59.056   Type: Exec
+2026-09-17 01:12:59.056   Filename: C:\Users\lisan\AppData\Local\NDI-SDK-Android\Redist\NDI 6 Runtime.exe
+2026-09-17 01:12:59.056   Parameters: /verysilent
+2026-09-17 01:13:07.601   Process exit code: 0
+2026-09-17 01:13:07.601   -- Run entry --
+2026-09-17 01:13:07.601   Run as: Current user
+2026-09-17 01:13:07.601   Type: Exec
+2026-09-17 01:13:07.601   Filename: cmd
+2026-09-17 01:13:07.601   Parameters: /c netsh winsock reset
+2026-09-17 01:13:07.758   Process exit code: 0
+2026-09-17 01:13:07.758   -- Run entry --
+2026-09-17 01:13:07.758   Run as: Current user
+2026-09-17 01:13:07.758   Type: Exec
+2026-09-17 01:13:07.758   Filename: cmd
+2026-09-17 01:13:07.758   Parameters: /c netsh int tcp reset
+2026-09-17 01:13:07.899   Process exit code: 0
+2026-09-17 01:13:07.908   Need to restart Windows? Yes
+2026-09-17 01:13:07.909   Will not restart Windows automatically.
+2026-09-17 01:13:07.910   Deinitializing Setup.
+2026-09-17 01:13:07.912   Stopping 64-bit helper process. (PID: 25756)
+2026-09-17 01:13:07.915   Helper process exited.
+2026-09-17 01:13:07.933   Log closed.

@@ -1,0 +1,24 @@
+plugins {
+    id 'com.android.application' version '8.13.2' apply false
+}
+
+// OneDrive puede bloquear los temporales que Android reemplaza durante el build.
+// El código permanece en el proyecto; solo los outputs intermedios van a caché local.
+def buildKey = Integer.toHexString(rootDir.absolutePath.hashCode())
+def outputRoot = new File(System.getProperty('user.home'), '.abismocam/build/' + buildKey)
+allprojects {
+    layout.buildDirectory.set(new File(outputRoot, project.name))
+}
+
+tasks.register('exportDebugApk', Copy) {
+    dependsOn ':app:assembleDebug'
+    from(project(':app').layout.buildDirectory.file('outputs/apk/debug/app-debug.apk'))
+    into layout.projectDirectory.dir('entregables')
+    rename 'app-debug.apk', 'AbismoCam-debug.apk'
+}
+
+tasks.register('exportValidation', Copy) {
+    dependsOn ':app:testDebugUnitTest', ':app:lintDebug'
+    from(project(':app').layout.buildDirectory.dir('reports'))
+    into layout.projectDirectory.dir('entregables/validacion')
+}
