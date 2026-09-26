@@ -1,4 +1,15 @@
-﻿# Validación de Abismo Cam 2 (0.3.0) — 25 de septiembre de 2026
+﻿# Abismo Cam 2 — transporte NDI, versión 0.4.0 — 26 de septiembre de 2026
+
+- Compilación, once pruebas unitarias y lint completados sin errores.
+- Prueba instrumentada `NdiTransportTest`: Unicast → Multicast → Unicast. Verifica aplicación solo al guardar, persistencia, archivo oficial del SDK, variable NDI_CONFIG_DIR y reanudación de cuadros enviados al SDK. Nombre, qHD y 30 fps conservados.
+- Informe: `entregables/validacion/transport-results.txt`.
+- Prueba de regresión de captura aprobada: cuenta regresiva, OSC 1/0, JPEG y avance de NDI durante el congelado. Informe: `capture-results-v4.txt`.
+- El selector habilita la negociación multicast; no indica qué transporte terminó usando cada receptor.
+- Pendiente: verificar tráfico multicast real, reconexión y recepción simultánea en las cinco computadoras conectadas al Archer AX55. Las pruebas del emulador sin receptores externos no prueban estos puntos.
+- Se conserva la limitación de captura intermitente del emulador documentada abajo; no se considera resuelta por este cambio.
+
+## Registro de la versión anterior
+# Validación de Abismo Cam 2 (0.3.0) — 25 de septiembre de 2026
 
 ## Comprobado
 
@@ -29,5 +40,7 @@ Durante varias ejecuciones del emulador, la captura agotó el plazo de 2,5 segun
 - El rendimiento del emulador no representa el del teléfono; no se garantiza todavía 720p/30 fps ni una cantidad concreta de receptores.
 
 APK: `entregables/AbismoCam-debug.apk`. Configuración y uso: `README.md`.
+
+
 
 

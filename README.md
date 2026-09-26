@@ -1,6 +1,6 @@
 ﻿# Abismo Cam 2 · MVP Android
 
-Cámara para **El abismo de la visibilidad**, Biopus. Versión 0.3.0. Samsung A51 como dispositivo objetivo; Android 8 o posterior, ARM64. Interfaz en español, orientación vertical, cámara frontal por defecto, sin micrófono. Guarda fotografías, no graba video.
+Cámara para **El abismo de la visibilidad**, Biopus. Versión 0.4.0. Samsung A51 como dispositivo objetivo; Android 8 o posterior, ARM64. Interfaz en español, orientación vertical, cámara frontal por defecto, sin micrófono. Guarda fotografías, no graba video.
 
 ## Estado
 
@@ -23,6 +23,16 @@ El SDK utilizado se instaló en `C:/Users/lisan/AppData/Local/NDI-SDK-Android`. 
 **NDI continúa enviando la cámara original en vivo durante el conteo, flash, congelado y guardado.** Esos efectos solo aparecen en el teléfono; NDI no lleva espejo ni superposiciones. La foto usa el siguiente cuadro disponible al terminar el conteo, a la resolución del video configurado. La pantalla recorta para llenarse; el archivo conserva el cuadro completo.
 
 El botón y la interfaz no se incluyen en el video. La vista frontal puede mostrarse espejada en la previsualización; el video enviado conserva la imagen de cámara sin espejo. Los cuadros se rotan para su orientación vertical. Resoluciones seleccionables: nHD 640×360, qHD 960×540 y HD 1280×720; en vertical, 360×640, 540×960 y 720×1280. Los FPS se eligen por separado: 15 o 30. La primera actualización a esta versión usa qHD a 30 fps y conserva los destinos OSC. Luego se recuerda la selección. Si la cámara entrega otro tamaño, el cuadro se recorta al centro y escala a la resolución elegida, sin espejo para NDI. Los FPS efectivos dependen del teléfono y la red.
+
+## Transporte NDI
+
+En ajustes (engranaje durante tres segundos), elegir **Unicast** o **Multicast** y tocar **Guardar y volver a cámara**. Unicast es el valor inicial; la selección queda guardada. Cambiar el selector sin guardar no modifica la transmisión. Al guardar un cambio se reinicia el emisor NDI; los receptores pueden mostrar negro o el último cuadro durante la reconexión. El nombre sigue siendo `abismoCam`. Si NDI estaba detenido manualmente, permanece detenido hasta iniciarlo desde ajustes.
+
+Multicast habilita la negociación con cada receptor: no obliga a todos a usarlo. La red debe permitir multicast y administrar correctamente IGMP; un receptor con multicast deshabilitado puede usar unicast. Probar con el teléfono por Wi-Fi de 5 GHz y las computadoras por cable antes de la instalación. OSC es independiente y conserva sus modos individual/broadcast sin repeticiones adicionales.
+
+El SDK estándar recibe la configuración oficial mediante `NDI_CONFIG_DIR` y el archivo privado `files/ndi/ndi-config.v1.json`. Se escribe de forma atómica, con `ndi.multicast.send.enable`, TTL 1 y rango 239.255.0.0/16. El cambio cierra el emisor, termina la instancia del SDK y vuelve a inicializarlo antes de crear la fuente. No se modifican ajustes del router ni de las computadoras receptoras.
+
+Referencias: [configuración SDK](https://docs.ndi.video/all/developing-with-ndi/sdk/configuration-files), [NDI_CONFIG_DIR y Android](https://docs.ndi.video/all/developing-with-ndi/sdk/platform-considerations).
 
 ## Verificar OSC desde Windows
 
@@ -84,4 +94,5 @@ Los archivos temporales de compilación se guardan en `%USERPROFILE%/.abismocam/
 - AndroidX y Gradle: Apache-2.0 y avisos de sus respectivas distribuciones.
 
 NDI® is a registered trademark of Vizrt NDI AB. Este proyecto personal no está afiliado a Vizrt. Los componentes externos mantienen sus propias licencias.
+
 

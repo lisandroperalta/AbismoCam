@@ -8,6 +8,7 @@
     <item name="settings" type="id" />
     <item name="ndi_toggle" type="id" />
     <item name="ndi_indicator" type="id" />
+    <item name="ndi_transport" type="id" />
     <item name="resolution" type="id" />
     <item name="fps" type="id" />
     <item name="save_settings" type="id" />

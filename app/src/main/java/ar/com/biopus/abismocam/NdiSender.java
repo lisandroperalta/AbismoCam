@@ -16,6 +16,7 @@ final class NdiSender {
     private boolean initialized;
     private final VideoFrame frame = new VideoFrame();
     private CreateSettings settings;
+    private Boolean multicastMode;
 
     @Structure.FieldOrder({"name", "groups", "clockVideo", "clockAudio"})
     public static class CreateSettings extends Structure {
@@ -40,8 +41,13 @@ final class NdiSender {
         public long timestamp;
     }
 
-    void start(String name, int fps) {
+    void start(String name, int fps, java.io.File configDirectory, boolean multicast) {
         stop();
+        if (multicastMode == null || multicastMode != multicast) {
+            close();
+            NdiTransport.configure(configDirectory, multicast);
+            multicastMode = multicast;
+        }
         if (library == null) library = NativeLibrary.getInstance("ndi", Collections.singletonMap("string-encoding", "UTF-8"));
         if (!initialized) {
             int ok = library.getFunction("NDIlib_initialize").invokeInt(new Object[0]);

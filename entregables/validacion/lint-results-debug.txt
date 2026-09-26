@@ -137,28 +137,28 @@ D:\OneDrive\Trabajos\Biopus\El abismo de la visibilidad\AbismoCam\app\src\main\j
 D:\OneDrive\Trabajos\Biopus\El abismo de la visibilidad\AbismoCam\app\src\main\java\ar\com\biopus\abismocam\MainActivity.java:161: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
             else if (!granted && cameraStatus != null) cameraStatus.setText("Cámara sin permiso · tocá aquí para habilitarla");
                                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\OneDrive\Trabajos\Biopus\El abismo de la visibilidad\AbismoCam\app\src\main\java\ar\com\biopus\abismocam\MainActivity.java:359: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+D:\OneDrive\Trabajos\Biopus\El abismo de la visibilidad\AbismoCam\app\src\main\java\ar\com\biopus\abismocam\MainActivity.java:362: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
                 cameraStatus.setText((config.frontCamera ? "Frontal" : "Trasera") + " · vista previa · sin audio");
                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\OneDrive\Trabajos\Biopus\El abismo de la visibilidad\AbismoCam\app\src\main\java\ar\com\biopus\abismocam\MainActivity.java:359: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+D:\OneDrive\Trabajos\Biopus\El abismo de la visibilidad\AbismoCam\app\src\main\java\ar\com\biopus\abismocam\MainActivity.java:362: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
                 cameraStatus.setText((config.frontCamera ? "Frontal" : "Trasera") + " · vista previa · sin audio");
                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\OneDrive\Trabajos\Biopus\El abismo de la visibilidad\AbismoCam\app\src\main\java\ar\com\biopus\abismocam\MainActivity.java:362: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+D:\OneDrive\Trabajos\Biopus\El abismo de la visibilidad\AbismoCam\app\src\main\java\ar\com\biopus\abismocam\MainActivity.java:365: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
                 cameraStatus.setText("No se pudo abrir la cámara. Tocá para reintentar.");
                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\OneDrive\Trabajos\Biopus\El abismo de la visibilidad\AbismoCam\app\src\main\java\ar\com\biopus\abismocam\MainActivity.java:479: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+D:\OneDrive\Trabajos\Biopus\El abismo de la visibilidad\AbismoCam\app\src\main\java\ar\com\biopus\abismocam\MainActivity.java:484: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
                 if (streamButton != null) streamButton.setText("Detener NDI");
                                                                ~~~~~~~~~~~~~
-D:\OneDrive\Trabajos\Biopus\El abismo de la visibilidad\AbismoCam\app\src\main\java\ar\com\biopus\abismocam\MainActivity.java:493: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+D:\OneDrive\Trabajos\Biopus\El abismo de la visibilidad\AbismoCam\app\src\main\java\ar\com\biopus\abismocam\MainActivity.java:498: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
         if (streamButton != null) { streamButton.setText("Iniciar NDI"); streamButton.setEnabled(true); }
                                                          ~~~~~~~~~~~~~
-D:\OneDrive\Trabajos\Biopus\El abismo de la visibilidad\AbismoCam\app\src\main\java\ar\com\biopus\abismocam\MainActivity.java:537: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+D:\OneDrive\Trabajos\Biopus\El abismo de la visibilidad\AbismoCam\app\src\main\java\ar\com\biopus\abismocam\MainActivity.java:542: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
         captureStatus.setText("Guardando foto…");
                               ~~~~~~~~~~~~~~~~~
-D:\OneDrive\Trabajos\Biopus\El abismo de la visibilidad\AbismoCam\app\src\main\java\ar\com\biopus\abismocam\MainActivity.java:552: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+D:\OneDrive\Trabajos\Biopus\El abismo de la visibilidad\AbismoCam\app\src\main\java\ar\com\biopus\abismocam\MainActivity.java:557: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
                         if (generation == captureGeneration) captureStatus.setText("Foto guardada");
                                                                                    ~~~~~~~~~~~~~~~
-D:\OneDrive\Trabajos\Biopus\El abismo de la visibilidad\AbismoCam\app\src\main\java\ar\com\biopus\abismocam\MainActivity.java:574: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+D:\OneDrive\Trabajos\Biopus\El abismo de la visibilidad\AbismoCam\app\src\main\java\ar\com\biopus\abismocam\MainActivity.java:579: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
         if (captureStatus != null) captureStatus.setText("Soltá el botón para iniciar · 5 s");
                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

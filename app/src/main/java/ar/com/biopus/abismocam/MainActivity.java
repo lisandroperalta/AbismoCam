@@ -260,7 +260,9 @@ public final class MainActivity extends ComponentActivity {
             }
             return true;
         });
-        header.addView(settingsButton, new LinearLayout.LayoutParams(dp(48), dp(48)));
+        FrameLayout settingsSlot = new FrameLayout(this);
+        settingsSlot.addView(settingsButton, new FrameLayout.LayoutParams(dp(48), dp(48), Gravity.END));
+        header.addView(settingsSlot, new LinearLayout.LayoutParams(dp(94), dp(48)));
         controls.addView(header, new FrameLayout.LayoutParams(-1, -2, Gravity.TOP));
 
         countdown = label("", 136, Color.WHITE);
@@ -274,7 +276,7 @@ public final class MainActivity extends ComponentActivity {
 
         LinearLayout footer = column();
         footer.setGravity(Gravity.CENTER_HORIZONTAL);
-        cameraStatus = label("Iniciando cámara…", 11, TEXT);
+        cameraStatus = label("Iniciando cámara…", 10, MUTED);
         cameraStatus.setGravity(Gravity.CENTER);
         cameraStatus.setShadowLayer(dp(3), 0, 1, Color.BLACK);
         cameraStatus.setOnClickListener(v -> {
@@ -282,7 +284,6 @@ public final class MainActivity extends ComponentActivity {
                 startActivity(new Intent(android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:" + getPackageName())));
             } else if (!cameraReady) bindCamera();
         });
-        footer.addView(cameraStatus);
         captureStatus = label("Soltá el botón para iniciar · 5 s", 13, TEXT);
         captureStatus.setId(R.id.capture_status);
         captureStatus.setGravity(Gravity.CENTER);
@@ -313,8 +314,10 @@ public final class MainActivity extends ComponentActivity {
         footer.addView(shutterRow, new LinearLayout.LayoutParams(-1, dp(106)));
         TextView mode = label("FOTO", 11, TEXT); mode.setLetterSpacing(0.2f); mode.setTypeface(null, Typeface.BOLD);
         footer.addView(mode);
+        cameraStatus.setPadding(0, dp(12), 0, 0);
+        footer.addView(cameraStatus);
         ndiStatus = label(ndiMessage, 10, MUTED);
-        ndiStatus.setGravity(Gravity.CENTER); ndiStatus.setPadding(0, dp(12), 0, 0);
+        ndiStatus.setGravity(Gravity.CENTER);
         footer.addView(ndiStatus);
         oscStatus = label(targetSummary(), 10, MUTED);
         oscStatus.setGravity(Gravity.CENTER); oscStatus.setMaxLines(2);
@@ -461,9 +464,11 @@ public final class MainActivity extends ComponentActivity {
         }
         String sourceName = config.sourceName;
         int fps = config.fps;
+        boolean multicast = config.ndiMulticast;
+        File ndiConfigDirectory = new File(getFilesDir(), "ndi");
         cameraExecutor.execute(() -> {
             String error = null;
-            try { if (ndi == null) ndi = new NdiSender(); ndi.start(sourceName, fps); }
+            try { if (ndi == null) ndi = new NdiSender(); ndi.start(sourceName, fps, ndiConfigDirectory, multicast); }
             catch (RuntimeException | LinkageError failure) { error = failure.toString(); }
             String failureText = error;
             main.post(() -> {
@@ -477,7 +482,7 @@ public final class MainActivity extends ComponentActivity {
                 statsStartMs = SystemClock.elapsedRealtime();
                 streaming = true;
                 if (streamButton != null) streamButton.setText("Detener NDI");
-                setNdiMessage("● NDI activo\n" + sourceName);
+                setNdiMessage("● NDI activo · " + (multicast ? "Multicast habilitado" : "Unicast") + "\n" + sourceName);
             });
         });
     }
@@ -612,6 +617,13 @@ public final class MainActivity extends ComponentActivity {
         streamButton.setEnabled(!starting);
         streamButton.setOnClickListener(v -> { ndiWanted = !(streaming || starting); if (ndiWanted) startNdi(); else stopNdi(); });
         content.addView(streamButton);
+        content.addView(label("Transporte NDI", 13, TEXT));
+        android.widget.Spinner transport = new android.widget.Spinner(this);
+        transport.setId(R.id.ndi_transport);
+        transport.setAdapter(new android.widget.ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, new String[] {"Unicast", "Multicast"}));
+        transport.setSelection(config.ndiMulticast ? 1 : 0);
+        content.addView(transport);
+        content.addView(label("Al guardar un cambio de transporte se reinicia NDI: los receptores pueden mostrar negro o el último cuadro mientras reconectan. Multicast requiere una red compatible; cada receptor negocia el modo y puede seguir usando unicast.", 12, MUTED));
         CheckBox front = check("Usar cámara frontal", config.frontCamera);
         content.addView(front);
         content.addView(label("Resolución", 13, TEXT));
@@ -680,7 +692,9 @@ public final class MainActivity extends ComponentActivity {
                 int width = new int[] {640, 960, 1280}[resolution.getSelectedItemPosition()];
                 int fps = fpsChoice.getSelectedItemPosition() == 0 ? 15 : 30;
                 boolean reconfigure = config.width != width || config.fps != fps || config.frontCamera != front.isChecked();
-                if (reconfigure) stopNdi();
+                boolean transportChanged = config.ndiMulticast != (transport.getSelectedItemPosition() == 1);
+                if (reconfigure || transportChanged) stopNdi();
+                config.ndiMulticast = transport.getSelectedItemPosition() == 1;
                 config.sourceName = "abismoCam"; config.address = addressText;
                 config.broadcast = isBroadcast; config.broadcastIp = ipText; config.broadcastPort = portValue;
                 config.frontCamera = front.isChecked();
@@ -693,10 +707,11 @@ public final class MainActivity extends ComponentActivity {
                 showCamera();
                 oscStatus.setText(targetSummary());
                 if (reconfigure) bindCamera();
+                else if (transportChanged && ndiWanted) startNdi();
             } catch (IllegalArgumentException invalid) { error.setText(invalid.getMessage()); }
         });
         content.addView(section("ACERCA DE ESTA PRUEBA"));
-        content.addView(label("Abismo Cam 2 · 0.3 · Biopus\nNDI automático al abrir. Continúa durante el conteo, la foto y los ajustes. Se detiene al salir de la app. OSC no tiene confirmación de recepción.\nNDI® is a registered trademark of Vizrt NDI AB.", 12, MUTED));
+        content.addView(label("abismoCam · 0.4.1 · Lisandro Peralta\nNDI automático al abrir. Continúa durante el conteo, la foto y los ajustes. Se detiene al salir de la app. OSC no tiene confirmación de recepción.\nNDI® is a registered trademark of Vizrt NDI AB.", 12, MUTED));
         Button ndiInfo = button("NDI® · ndi.video", false);
         ndiInfo.setOnClickListener(v -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://ndi.video"))));
         content.addView(ndiInfo);

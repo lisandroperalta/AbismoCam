@@ -1,0 +1,142 @@
+# abismoCam — historial y hoja de ruta
+
+Última actualización: **26 de septiembre de 2026**. Versión actual: **0.4.1** (código de versión Android: 5).
+
+Aplicación Android de Lisandro Peralta para el proyecto **El abismo de la visibilidad**. Transmite la cámara por NDI, envía señales OSC y guarda fotografías con una cuenta regresiva local.
+
+## Cómo se reconstruyó este historial
+
+Se revisaron la conversación de desarrollo, el código actual, Git, README.md, VALIDACION.md y los informes de pruebas. El primer commit disponible (`e2fb2e8`, 25/09/2026) ya contiene la versión **0.3.0**: no hay commits separados que permitan fechar o numerar con certeza las primeras etapas. Por eso se describen como etapas previas, sin atribuirles números de versión.
+
+Las versiones 0.4.0 y 0.4.1 están implementadas en la carpeta de trabajo, pero no tienen un commit propio en el historial local revisado. Este documento no implica que esos cambios ya estén publicados en GitHub.
+
+## Historial de cambios
+
+### Primera etapa — MVP de cámara, NDI y OSC
+
+Fecha y número de versión inicial no verificables con el historial disponible.
+
+- Se definió una aplicación personal para Android, con Samsung A51 como teléfono objetivo y varias computadoras receptoras con distintos programas.
+- Se implementó captura de cámara y transmisión de video mediante el SDK oficial NDI para Android. Se incorporaron bibliotecas ARM64 para el teléfono y x86_64 para el emulador, junto con los avisos de licencia.
+- Se estableció transmisión de video sin audio del micrófono. La app no graba archivos de video.
+- Se implementaron dos modos alternativos de envío OSC: lista de destinos individuales con IP y puerto, o broadcast de subred. La lista se conserva al cambiar de modo.
+- Se incorporaron configuración persistente, habilitación y edición de destinos, dirección OSC configurable y detección de dirección de broadcast.
+- El comportamiento solicitado originalmente para el botón era enviar `1` al presionar y `0` al soltar. Más adelante se reemplazó por el comportamiento ligado a la cuenta regresiva.
+- Se prepararon la compilación, el APK instalable y un monitor OSC para Windows (`tools/osc-monitor.ps1`).
+
+### Segunda etapa — interfaz de cámara y fotografía con cuenta regresiva
+
+Etapa anterior a 0.3.0; sin fecha ni versión independiente verificable.
+
+- Se rediseñó la pantalla principal con una interfaz inspirada en una cámara de redes sociales: previsualización amplia, disparador circular inferior y engranaje de ajustes pequeño arriba.
+- Se eligió cámara frontal por defecto, con previsualización espejada. El video NDI conserva la imagen original, sin espejo ni elementos de interfaz.
+- Se cambió el disparo: **soltar** el botón inicia la cuenta `5, 4, 3, 2, 1`. Mantenerlo presionado no inicia la cuenta.
+- Se vinculó OSC a la secuencia: entero `1` al comenzar la cuenta y entero `0` al finalizar. Se envía un mensaje por transición; no un flujo continuo durante el conteo.
+- Se bloquearon disparos adicionales durante la secuencia.
+- Al finalizar se muestra un flash blanco breve y la foto congelada durante un segundo; después vuelve automáticamente la imagen en vivo.
+- Se añadió guardado JPEG en `Pictures/AbismoCam`, miniatura y apertura de la última foto. La fotografía frontal se guarda espejada.
+- Se mantuvo el envío de cámara en vivo por NDI durante la cuenta, el flash, el congelado y el guardado. Los efectos son locales al teléfono.
+- Se añadió cancelación al abandonar la app, con intento de envío OSC `0`, y bloqueo de acceso a ajustes durante la secuencia.
+
+La foto utiliza el siguiente cuadro disponible al terminar la cuenta. OSC y NDI viajan por separado: el mensaje no identifica un fotograma concreto ni garantiza sincronización exacta entre receptores.
+
+### 0.3.0 — controles protegidos y calidad seleccionable
+
+Fecha documentada: **25/09/2026**. Incluida en el primer commit de Git.
+
+- Se cambió el nombre visible de la aplicación a **Abismo Cam 2**.
+- Se fijó el nombre del emisor NDI en **`abismoCam`**.
+- Se activó NDI automáticamente al abrir la aplicación con permiso de cámara.
+- Se retiró el control de activar/desactivar NDI de la pantalla principal para evitar cambios accidentales. Quedó dentro de ajustes; el indicador principal es informativo.
+- Se protegió el acceso a ajustes con una pulsación de **tres segundos** sobre el engranaje.
+- Se añadieron resoluciones **nHD 640 × 360**, **qHD 960 × 540** y **HD 1280 × 720**, y selección independiente de **15 o 30 fps**.
+- Se estableció **qHD a 30 fps** como configuración inicial de esa actualización, conservando los destinos OSC. Las selecciones posteriores quedan guardadas.
+- Se ajustó el cuadro a la resolución elegida mediante recorte central y escalado cuando la cámara entrega otro tamaño. En vertical las dimensiones se invierten: 360 × 640, 540 × 960 o 720 × 1280.
+- Se mantuvo NDI funcionando al entrar y salir de ajustes. Guardar cambios de cámara, resolución o FPS reinicia brevemente la transmisión.
+- Se trasladaron los archivos temporales de compilación fuera de OneDrive, manteniendo código y entregables en el proyecto.
+- Se propuso repetir los valores OSC durante un segundo para reducir pérdidas, pero **se dejó expresamente de lado**: no se implementó esa repetición.
+
+Validación registrada: once pruebas unitarias, tres pruebas instrumentadas y lint sin errores. Se comprobaron el flujo de captura, OSC UDP en el emulador, JPEG y avance de envíos al SDK NDI durante el congelado. Se probaron las seis combinaciones de resolución y FPS; esto no garantiza esos FPS efectivos en el teléfono.
+
+### Repositorio y entregables — 25/09/2026
+
+- Se preparó el repositorio para GitHub Desktop. El historial local comienza en `e2fb2e8`.
+- Se corrigió la identidad de correo de Git para usar la dirección privada `noreply` de GitHub y resolver el bloqueo de publicación por privacidad del correo.
+- Se quitó `entregables/` de `.gitignore` a pedido del usuario. El commit `9ee7641` incorpora APK, checksum e informes de validación.
+- Las bibliotecas nativas `.so`, los archivos locales del SDK y los temporales de compilación siguen excluidos según `.gitignore`; clonar el código requiere volver a incorporar las bibliotecas NDI para compilar un APK con ellas.
+
+### 0.4.0 — selector de transporte NDI
+
+Fecha documentada: **26/09/2026**.
+
+- Se añadió selección **Unicast / Multicast** dentro de los ajustes protegidos. Unicast es el valor inicial.
+- El modo se aplica al guardar y queda persistido. Cambiar el selector sin guardar no modifica el emisor.
+- Se incorporó configuración del SDK mediante `NDI_CONFIG_DIR` y su archivo privado, con multicast de envío habilitable, TTL 1 y rango `239.255.0.0/16`.
+- Al cambiar de transporte se cierra el emisor y se reinicializa el SDK antes de recrear la fuente. Se conserva el nombre `abismoCam`.
+- Se agregó indicación del modo configurado y aviso de posible interrupción temporal en los receptores al guardar el cambio.
+- Si NDI estaba detenido manualmente, el cambio de configuración no lo inicia por sí solo.
+- OSC conserva sus modos individuales/broadcast y no cambia con el transporte NDI.
+
+**Multicast habilitado no significa multicast obligatorio.** La implementación permite negociación; algunos receptores pueden usar unicast. No se implementó una opción que fuerce multicast para todos.
+
+Validación automatizada: prueba de cambio Unicast → Multicast → Unicast, persistencia, configuración del SDK y reanudación de envíos; prueba de regresión de captura aprobada. Informes: `entregables/validacion/transport-results.txt` y `capture-results-v4.txt`.
+
+#### Comprobación de red aportada durante la conversación
+
+- Se planteó un teléfono por Wi-Fi conectado a un TP-Link AX3000 Archer AX55 y unas cinco computadoras por Ethernet. Durante la comprobación, la computadora receptora estaba por Wi-Fi.
+- La captura inicial mostraba tráfico TCP desde el teléfono hacia la IP individual de la computadora.
+- Después de cerrar y abrir las aplicaciones, Wireshark mostró tráfico UDP del teléfono `192.168.0.228` hacia **`239.255.243.132`**, puerto destino `14972`.
+- Esa dirección de destino confirma tráfico multicast en la captura mostrada. Que el protocolo sea UDP, por sí solo, no bastaría para confirmarlo.
+- Esta evidencia no demuestra todavía recepción simultánea estable en cinco equipos ni reconexión automática de todos al cambiar de modo sin reiniciar las aplicaciones. Las IP son las de esa prueba, no valores fijos de la app.
+
+### 0.4.1 — nombre, créditos y distribución de información
+
+Fecha de compilación y comprobación: **26/09/2026**.
+
+- Se cambió el nombre visible de la aplicación a **`abismoCam`**, igual al emisor NDI.
+- En Acerca de se reemplazó el crédito “Biopus” por **Lisandro Peralta** y se actualizó la versión mostrada.
+- Se centró el encabezado **EL ABISMO**, compensando la diferencia de ancho entre el indicador NDI y el engranaje.
+- Se trasladó resolución/FPS al bloque inferior: debajo de FOTO y por encima del estado NDI, con tamaño de texto equivalente al de OSC.
+- Se conservó el identificador Android de la aplicación para actualizar la instalación existente.
+- Se generó el APK actualizado y su checksum SHA-256.
+
+Validación: compilación y once pruebas unitarias correctas; lint con 0 errores y 26 advertencias. Se verificaron en el emulador el centrado del título, la ubicación de los textos y los créditos de Acerca de. No se repitió toda la suite instrumentada para estos cambios cosméticos.
+
+## Estado actual y límites conocidos
+
+- APK para instalación manual: `entregables/AbismoCam-debug.apk`. Es una compilación de desarrollo, no una publicación en Google Play.
+- Cámara frontal, formato vertical, qHD/30 por defecto; valores configurables. Sin micrófono ni grabación de video.
+- Envío NDI de imagen original; espejo y efectos de captura solo en la presentación local, con fotografía frontal espejada.
+- La app debe permanecer visible para transmitir. Al salir se detiene NDI; al volver se reanuda si no se había detenido manualmente.
+- OSC UDP no confirma recepción. “Enviado” no equivale a recibido por todas las computadoras.
+- Se observó una falla intermitente en el emulador: después de cambios de calidad y recreación de actividades, algunas capturas agotaron el plazo de espera de un cuadro. Pruebas posteriores pasaron, pero la causa no quedó confirmada ni el problema definitivamente resuelto.
+- La prueba multicast aportada por el usuario complementa la validación del emulador. Sigue pendiente comprobar rendimiento sostenido y compatibilidad en el montaje completo.
+
+## Hoja de ruta pendiente
+
+### Validaciones pendientes del funcionamiento acordado
+
+- [ ] Probar en el Samsung A51 arranques, permisos, orientación, espejo, colores, guardado en galería y capturas repetidas.
+- [ ] Repetir cambios de calidad y capturas para comprobar si aparece la falla intermitente observada en el emulador.
+- [ ] Validar recepción NDI simultánea en unas cinco computadoras y los programas que se utilizarán, incluido TouchDesigner.
+- [ ] Comprobar Unicast → Multicast → Unicast en la red real, midiendo interrupción y necesidad de reconectar o reiniciar cada receptor.
+- [ ] Confirmar el transporte real de los receptores con capturas de red; el selector de la app solo muestra lo configurado.
+- [ ] Probar OSC individual y broadcast en el montaje completo y verificar los valores 1/0 de cada secuencia.
+- [ ] Medir FPS efectivos, latencia, estabilidad y temperatura durante una sesión sostenida, con teléfono por Wi-Fi y computadoras por Ethernet.
+- [ ] Comparar las opciones de resolución/FPS y transporte para elegir la configuración de uso de la instalación.
+
+Estas tareas son verificaciones pendientes; no implican nuevas funciones ni tienen una fecha de entrega acordada.
+
+### Propuestas postergadas o sin implementación acordada
+
+- **Repetición de OSC durante un segundo:** postergada expresamente. Si se retoma, definir cómo tratarán los receptores los mensajes duplicados antes de implementarla.
+- **Forzar multicast sin permitir unicast:** consultado, pero no implementado. Requiere confirmar una vía compatible con el SDK y con los receptores antes de prometer esa función.
+
+## Referencias del proyecto
+
+- [README.md](README.md): instalación, configuración y compilación. Su encabezado todavía describe 0.4.0 con el nombre anterior al momento de redactar este historial.
+- [VALIDACION.md](VALIDACION.md): pruebas y limitaciones documentadas de 0.3.0 y 0.4.0.
+- [Informes de validación](entregables/validacion/): resultados y capturas conservados en el proyecto. Algunos informes se actualizan al recompilar; no son un archivo inmutable de cada versión.
+- [Configuración de versión Android](app/build.gradle): versión actual del código.
+
+Para próximas actualizaciones, añadir una entrada con versión, fecha, cambios y pruebas realizadas, y trasladar a esa entrada los pendientes que se completen.
