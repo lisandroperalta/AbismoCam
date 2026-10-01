@@ -21,13 +21,17 @@ final class CaptureSequence {
     State state() { return state; }
     boolean isBusy() { return state != State.IDLE; }
 
-    boolean start(long now) {
+    boolean start(long now) { return start(now, 5); }
+
+    boolean start(long now, int seconds) {
         if (isBusy()) return false;
+        if (seconds < 0 || seconds > 15) throw new IllegalArgumentException("Cuenta fuera de rango");
         state = State.COUNTDOWN;
-        deadline = now + 5000;
-        number = 5;
+        deadline = now + seconds * 1000L;
+        number = seconds;
         listener.onOsc(1);
-        listener.onCount(5);
+        if (seconds > 0) listener.onCount(seconds);
+        else tick(now);
         return true;
     }
 

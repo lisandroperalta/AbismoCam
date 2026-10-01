@@ -13,6 +13,24 @@ import java.util.concurrent.TimeUnit;
 import static org.junit.Assert.*;
 
 public class OscRepeaterTest {
+    @Test public void immediateCapturePulseSendsFiveOnesThenFiveZerosEvenAfterClose() throws Exception {
+        for (int interval : new int[] {10, 25, 50, 100}) {
+            try (DatagramSocket receiver = new DatagramSocket(0, InetAddress.getLoopbackAddress());
+                 OscRepeater repeater = new OscRepeater((targets, path, value) -> Osc.send(targets, path, value))) {
+                receiver.setSoTimeout(2000);
+                long start = System.nanoTime();
+                repeater.sendPulse(Collections.singletonList(new Osc.Destination("QA", "127.0.0.1", receiver.getLocalPort(), true)), "/test", interval);
+                repeater.close();
+                for (int i = 0; i < 10; i++) {
+                    assertEquals(i < 5 ? 1 : 0, receive(receiver));
+                    if (i == 5) assertTrue(TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - start) >= 5L * interval - 15);
+                }
+                assertTrue(TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - start) >= 9L * interval - 15);
+                receiver.setSoTimeout(100);
+                assertThrows(java.net.SocketTimeoutException.class, () -> receive(receiver));
+            }
+        }
+    }
     @Test public void fiveUdpPacketsForBothValuesAtEveryIntervalAndEveryEnabledTarget() throws Exception {
         for (int interval : new int[] {10, 25, 50, 100}) {
             try (DatagramSocket first = new DatagramSocket(0, InetAddress.getLoopbackAddress());

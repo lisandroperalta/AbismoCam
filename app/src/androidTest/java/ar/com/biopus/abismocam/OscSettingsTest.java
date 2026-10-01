@@ -19,6 +19,7 @@ public class OscSettingsTest {
                 "{\"schemaVersion\":3,\"address\":\"/custom\",\"width\":1280,\"fps\":15}").commit();
             Config migrated = Config.load(context);
             assertEquals(50, migrated.oscIntervalMs);
+            assertEquals(5, migrated.countdownSeconds);
             assertEquals("/custom", migrated.address); assertEquals(1280, migrated.width); assertEquals(15, migrated.fps);
             try (ActivityScenario<MainActivity> scenario = ActivityScenario.launch(MainActivity.class)) {
                 for (int choice = 0; choice < 4; choice++) {
@@ -34,12 +35,20 @@ public class OscSettingsTest {
                         Spinner spinner = a.findViewById(R.id.osc_interval);
                         assertNotNull(spinner);
                         spinner.setSelection(selected);
+                        Spinner countdown = a.findViewById(R.id.countdown_seconds);
+                        assertEquals(16, countdown.getCount());
+                        countdown.setSelection(new int[] {0, 1, 5, 15}[selected]);
                         a.findViewById(R.id.save_settings).performClick();
                     });
                     assertEquals(new int[] {10, 25, 50, 100}[choice], Config.load(context).oscIntervalMs);
+                    assertEquals(new int[] {0, 1, 5, 15}[choice], Config.load(context).countdownSeconds);
+                    final int duration = new int[] {0, 1, 5, 15}[choice];
+                    scenario.onActivity(a -> assertTrue(((android.widget.TextView)a.findViewById(R.id.capture_status)).getText().toString()
+                        .contains(duration == 0 ? "sacar la foto" : duration + " s")));
                 }
                 scenario.recreate();
                 assertEquals(100, Config.load(context).oscIntervalMs);
+                assertEquals(15, Config.load(context).countdownSeconds);
             }
         } finally { context.getSharedPreferences("config", 0).edit().putString("json", previous).commit(); }
     }

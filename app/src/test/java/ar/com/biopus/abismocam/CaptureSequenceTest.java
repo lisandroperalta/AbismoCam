@@ -7,6 +7,31 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 public class CaptureSequenceTest {
+    @Test public void zeroCapturesImmediatelyWithoutNumbersAndRemainsLocked() {
+        Events e = new Events(); CaptureSequence s = new CaptureSequence(e);
+        assertTrue(s.start(100, 0));
+        assertEquals(Arrays.asList("osc:1", "osc:0", "capture"), e.events);
+        assertEquals(CaptureSequence.State.AWAITING_FRAME, s.state());
+        assertFalse(s.start(100, 0));
+        assertTrue(s.frameReady(110));
+        s.tick(110 + CaptureSequence.FLASH_MS + 999); assertTrue(s.isBusy());
+        s.tick(110 + CaptureSequence.FLASH_MS + 1000); assertFalse(s.isBusy());
+    }
+
+    @Test public void everyPositiveDurationEndsAtItsOwnDeadline() {
+        for (int seconds = 1; seconds <= 15; seconds++) {
+            Events e = new Events(); CaptureSequence s = new CaptureSequence(e);
+            s.start(50, seconds);
+            assertEquals(Arrays.asList("osc:1", "count:" + seconds), e.events);
+            for (int elapsed = 1; elapsed < seconds; elapsed++) {
+                s.tick(50 + elapsed * 1000L);
+                assertEquals("count:" + (seconds - elapsed), e.events.get(e.events.size() - 1));
+            }
+            s.tick(49 + seconds * 1000L); assertEquals(CaptureSequence.State.COUNTDOWN, s.state());
+            s.tick(50 + seconds * 1000L); assertEquals(CaptureSequence.State.AWAITING_FRAME, s.state());
+            assertEquals("capture", e.events.get(e.events.size() - 1));
+        }
+    }
     private static final class Events implements CaptureSequence.Listener {
         final List<String> events = new ArrayList<>();
         public void onOsc(int v) { events.add("osc:" + v); }

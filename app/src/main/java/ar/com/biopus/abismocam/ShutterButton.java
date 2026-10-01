@@ -17,7 +17,7 @@ final class ShutterButton extends View {
         super(context);
         setClickable(true);
         setFocusable(true);
-        setContentDescription("Capturar foto con cuenta regresiva de cinco segundos");
+        setContentDescription("Capturar foto");
     }
 
     @Override protected void onDraw(Canvas canvas) {

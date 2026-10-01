@@ -1,6 +1,6 @@
 # abismoCam · MVP Android
 
-Cámara para **El abismo de la visibilidad**, Lisandro Peralta. Versión 0.5.0. Samsung A51 como dispositivo objetivo; Android 8 o posterior, ARM64. Interfaz en español, orientación vertical, cámara frontal por defecto, sin micrófono. Guarda fotografías, no graba video.
+Cámara para **El abismo de la visibilidad**, Lisandro Peralta. Versión 0.6.0. Samsung A51 como dispositivo objetivo; Android 8 o posterior, ARM64. Interfaz en español, orientación vertical, cámara frontal por defecto, sin micrófono. Guarda fotografías, no graba video.
 
 ## Estado
 
@@ -16,13 +16,30 @@ El SDK utilizado se instaló en `C:/Users/lisan/AppData/Local/NDI-SDK-Android`. 
    - **Computadoras individuales**: nombre, IPv4 y puerto por receptor; se puede habilitar, editar o eliminar cada destino.
    - **Broadcast**: dirección de broadcast y puerto común. Detectar broadcast calcula la dirección de una interfaz local Wi-Fi/Ethernet. Revisarla si hay varias interfaces. No funciona a través de subredes o redes que lo bloqueen.
 4. Configurar los receptores para escuchar OSC UDP en el puerto elegido, en su interfaz de red o `0.0.0.0`, no solamente en `127.0.0.1`.
-5. Soltar el disparador circular inicia la cuenta **5, 4, 3, 2, 1**. Envía `/camara/disparo` con tipo OSC `,i` y entero `1` al comenzar y `0` al terminar. La ruta es configurable. Mantener el dedo apoyado no inicia nada; los toques adicionales se bloquean hasta volver a la cámara en vivo.
+5. Soltar el disparador circular inicia la cuenta configurada: **5 segundos por defecto**, elegible de **0 a 15 segundos** en pasos de uno. Envía `/camara/disparo` con tipo OSC `,i` y entero `1` al comenzar y `0` al terminar. Con **0 s** solicita la foto al soltar, sin mostrar números; OSC envía cinco `1` y después cinco `0`, como se detalla abajo. La ruta es configurable. Mantener el dedo apoyado no inicia nada; los toques adicionales se bloquean hasta volver a la cámara en vivo.
 6. Al terminar: flash blanco breve, foto congelada durante un segundo y regreso automático al video. La foto se guarda como JPEG en **Pictures/AbismoCam** y aparece una miniatura para abrirla. La cámara frontal y su foto se muestran espejadas.
 7. NDI comienza automáticamente al abrir la app con permiso de cámara. Seleccionar la fuente **abismoCam** en los receptores. El indicador de la pantalla principal no responde a toques; activar o detener NDI solo está disponible dentro de ajustes. Cada receptor necesita soporte NDI High Bandwidth.
 
 **NDI continúa enviando la cámara original en vivo durante el conteo, flash, congelado y guardado.** Esos efectos solo aparecen en el teléfono; NDI no lleva espejo ni superposiciones. La foto usa el siguiente cuadro disponible al terminar el conteo, a la resolución del video configurado. La pantalla recorta para llenarse; el archivo conserva el cuadro completo.
 
 El botón y la interfaz no se incluyen en el video. La vista frontal puede mostrarse espejada en la previsualización; el video enviado conserva la imagen de cámara sin espejo. Los cuadros se rotan para su orientación vertical. Resoluciones seleccionables: nHD 640×360, qHD 960×540 y HD 1280×720; en vertical, 360×640, 540×960 y 720×1280. Los FPS se eligen por separado: 15 o 30. La primera actualización a esta versión usa qHD a 30 fps y conserva los destinos OSC. Luego se recuerda la selección. Si la cámara entrega otro tamaño, el cuadro se recorta al centro y escala a la resolución elegida, sin espejo para NDI. Los FPS efectivos dependen del teléfono y la red.
+
+## Cuenta regresiva configurable
+
+Mantener el engranaje tres segundos, elegir **Cuenta regresiva** y tocar **Guardar y volver a cámara**. Hay 16 opciones, de 0 a 15 segundos. Las instalaciones anteriores adoptan 5 segundos; luego se recuerda el valor guardado. Cambiarlo actualiza el texto y el indicador de la pantalla principal sin reiniciar NDI ni modificar destinos OSC o calidad de video.
+
+Con 0 segundos no hay espera de conteo: se solicita el siguiente cuadro disponible al soltar, se muestra el flash y la foto congelada un segundo, y se guarda el JPEG. No se espera a completar OSC para capturar; tampoco se detiene la transmisión NDI original.
+
+Para que el receptor pueda detectar ambas transiciones con 0 s, se programan diez mensajes: cinco `1` y luego cinco `0`, separados por el intervalo OSC seleccionado. Con 50 ms: los `1` salen en 0, 50, 100, 150 y 200 ms; los `0` en 250, 300, 350, 400 y 450 ms.
+
+| Intervalo OSC | Primer 0 (duración nominal del estado 1) | Último 0 (duración total) |
+| --- | ---: | ---: |
+| 10 ms | 50 ms | 90 ms |
+| 25 ms | 125 ms | 225 ms |
+| 50 ms (predeterminado) | 250 ms | 450 ms |
+| 100 ms | 500 ms | 900 ms |
+
+Son tiempos programados, no garantías de latencia ni recepción. Con cuentas de 1 a 15 s se conservan cinco `1` al inicio y cinco `0` al final. La cuenta, el flash y el congelado bloquean nuevos disparos. Si se abandona la app durante el modo inmediato, la ráfaga ya programada puede finalizar mientras el proceso siga vivo; un cierre forzado no garantiza su entrega.
 
 ## Transporte NDI
 
@@ -74,7 +91,7 @@ Dependencias fijadas: AGP 8.13.2, Gradle 8.13 (con checksum), Java 17 o posterio
 
 Resultado: `entregables/AbismoCam-debug.apk`. Es un APK de desarrollo para instalar manualmente; no es una publicación en Google Play. Los reportes de pruebas y análisis estático se exportan a `entregables/validacion/`.
 
-Las pruebas unitarias cubren OSC, sus repeticiones y el reloj de captura (13 casos). Con un dispositivo o emulador conectado, `gradlew.bat connectedDebugAndroidTest` ejecuta además las pruebas Android: toques, OSC UDP real, captura JPEG, cancelación, selección de intervalos, transporte NDI y avance de cuadros enviados al SDK durante el congelado. Requieren la biblioteca NDI de la arquitectura correspondiente; no prueban un receptor NDI externo.
+Las pruebas unitarias cubren OSC, sus repeticiones y el reloj de captura (16 casos). Con un dispositivo o emulador conectado, `gradlew.bat connectedDebugAndroidTest` ejecuta además las pruebas Android: toques, OSC UDP real, captura JPEG, cancelación, selección de intervalos, transporte NDI y avance de cuadros enviados al SDK durante el congelado. Requieren la biblioteca NDI de la arquitectura correspondiente; no prueban un receptor NDI externo.
 
 Los archivos temporales de compilación se guardan en `%USERPROFILE%/.abismocam/build/`, en una subcarpeta por proyecto, para evitar bloqueos de OneDrive. El código y los entregables permanecen en esta carpeta. En Android Studio puede ejecutarse la tarea raíz `exportDebugApk` para copiar el APK a `entregables`.
 

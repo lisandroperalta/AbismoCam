@@ -25,13 +25,23 @@ final class OscRepeater implements AutoCloseable {
     }
 
     synchronized void send(List<Osc.Destination> targets, String address, int value, int interval) {
+        schedule(targets, address, value, interval, false);
+    }
+
+    /** Sin cuenta: 1 en 0..4 intervalos, 0 en 5..9, sin bloquear la captura. */
+    synchronized void sendPulse(List<Osc.Destination> targets, String address, int interval) {
+        schedule(targets, address, 1, interval, true);
+    }
+
+    private void schedule(List<Osc.Destination> targets, String address, int value, int interval, boolean pulse) {
         if (executor.isShutdown()) return;
         for (ScheduledFuture<?> task : pending) task.cancel(false);
         pending.clear();
         List<Osc.Destination> snapshot = new ArrayList<>(targets);
         int gap = validInterval(interval);
-        for (int i = 0; i < COUNT; i++) {
-            pending.add(executor.schedule(() -> sink.send(snapshot, address, value),
+        for (int i = 0; i < (pulse ? COUNT * 2 : COUNT); i++) {
+            int packetValue = pulse && i >= COUNT ? 0 : value;
+            pending.add(executor.schedule(() -> sink.send(snapshot, address, packetValue),
                 (long)i * gap, TimeUnit.MILLISECONDS));
         }
     }

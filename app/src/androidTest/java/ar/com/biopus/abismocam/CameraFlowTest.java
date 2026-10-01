@@ -64,6 +64,45 @@ public class CameraFlowTest {
         }
     }
 
+    @Test public void zeroSecondsCapturesImmediatelyAndSendsBothBursts() throws Exception {
+        Context context = InstrumentationRegistry.getInstrumentation().getTargetContext();
+        grantCamera(context);
+        String previous = context.getSharedPreferences("config", 0).getString("json", "{}");
+        Uri created = null;
+        try (DatagramSocket receiver = new DatagramSocket(0, InetAddress.getByName("127.0.0.1"))) {
+            receiver.setSoTimeout(1500);
+            Config config = new Config(); config.countdownSeconds = 0; config.oscIntervalMs = 100;
+            config.destinations.add(new Osc.Destination("QA", "127.0.0.1", receiver.getLocalPort(), true));
+            config.save(context);
+            try (ActivityScenario<MainActivity> scenario = ActivityScenario.launch(MainActivity.class)) {
+                until(() -> (long)read(scenario, "ndiFramesSent") > 4, 20000);
+                long before = read(scenario, "ndiFramesSent");
+                touch(scenario, MotionEvent.ACTION_DOWN);
+                SystemClock.sleep(100);
+                scenario.onActivity(a -> assertEquals(CaptureSequence.State.IDLE, ((CaptureSequence)field(a, "sequence")).state()));
+                touch(scenario, MotionEvent.ACTION_UP);
+                scenario.onActivity(a -> {
+                    assertNotEquals(CaptureSequence.State.COUNTDOWN, ((CaptureSequence)field(a, "sequence")).state());
+                    assertEquals(View.GONE, a.findViewById(R.id.countdown).getVisibility());
+                    assertFalse(a.findViewById(R.id.shutter).isEnabled());
+                });
+                for (int i = 0; i < 10; i++) assertEquals(i < 5 ? 1 : 0, receive(receiver));
+                until(() -> read(scenario, "lastPhotoUri") != null, 6000);
+                created = read(scenario, "lastPhotoUri");
+                try (InputStream input = context.getContentResolver().openInputStream(created)) {
+                    assertNotNull(BitmapFactory.decodeStream(input));
+                }
+                assertTrue((long)read(scenario, "ndiFramesSent") > before);
+                until(() -> !((CaptureSequence)read(scenario, "sequence")).isBusy(), 4000);
+                receiver.setSoTimeout(200);
+                assertThrows(java.net.SocketTimeoutException.class, () -> receive(receiver));
+            }
+        } finally {
+            if (created != null) context.getContentResolver().delete(created, null, null);
+            context.getSharedPreferences("config", 0).edit().putString("json", previous).commit();
+        }
+    }
+
     @Test public void releaseCountdownPhotoAndNdiStayIndependent() throws Exception {
         Context context = InstrumentationRegistry.getInstrumentation().getTargetContext();
         grantCamera(context);

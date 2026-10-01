@@ -122,7 +122,7 @@ public final class MainActivity extends ComponentActivity {
     private NdiSender ndi;
     private PreviewView previewView;
     private ProcessCameraProvider cameraProvider;
-    private TextView cameraStatus, oscStatus, ndiStatus, countdown, captureStatus;
+    private TextView cameraStatus, oscStatus, ndiStatus, countdown, captureStatus, timerLabel;
     private ShutterButton trigger;
     private Button streamButton;
     private TextView ndiIndicator;
@@ -203,6 +203,7 @@ public final class MainActivity extends ComponentActivity {
             settingsPanel = null;
             streamButton = null;
             settingsVisible = false;
+            updateCountdownLabels();
             return;
         }
         settingsVisible = false;
@@ -284,7 +285,7 @@ public final class MainActivity extends ComponentActivity {
                 startActivity(new Intent(android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:" + getPackageName())));
             } else if (!cameraReady) bindCamera();
         });
-        captureStatus = label("Soltá el botón para iniciar · 5 s", 13, TEXT);
+        captureStatus = label(idleCaptureText(), 13, TEXT);
         captureStatus.setId(R.id.capture_status);
         captureStatus.setGravity(Gravity.CENTER);
         captureStatus.setPadding(0, dp(12), 0, dp(6));
@@ -308,7 +309,8 @@ public final class MainActivity extends ComponentActivity {
             try { startActivity(new Intent(Intent.ACTION_VIEW).setDataAndType(lastPhotoUri, "image/jpeg").addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)); }
             catch (android.content.ActivityNotFoundException unavailable) { toast("Foto guardada en Pictures/AbismoCam."); }
         });
-        TextView timerLabel = label("5 s", 14, TEXT); timerLabel.setGravity(Gravity.CENTER);
+        timerLabel = label(config.countdownSeconds + " s", 14, TEXT); timerLabel.setGravity(Gravity.CENTER);
+        updateCountdownLabels();
         FrameLayout.LayoutParams timerLayout = new FrameLayout.LayoutParams(dp(48), dp(48), Gravity.END | Gravity.CENTER_VERTICAL);
         timerLayout.rightMargin = dp(22); shutterRow.addView(timerLabel, timerLayout);
         footer.addView(shutterRow, new LinearLayout.LayoutParams(-1, dp(106)));
@@ -505,7 +507,10 @@ public final class MainActivity extends ComponentActivity {
     }
 
     private void queueOsc(List<Osc.Destination> targets, String address, int value) {
-        oscRepeater.send(targets, address, value, config.oscIntervalMs);
+        if (config.countdownSeconds == 0) {
+            // El 0 de la captura inmediata ya queda programado después de los cinco 1.
+            if (value == 1) oscRepeater.sendPulse(targets, address, config.oscIntervalMs);
+        } else oscRepeater.send(targets, address, value, config.oscIntervalMs);
     }
 
     private void sendOscPacket(List<Osc.Destination> targets, String address, int value) {
@@ -528,7 +533,7 @@ public final class MainActivity extends ComponentActivity {
             return;
         }
         captureGeneration++;
-        sequence.start(SystemClock.elapsedRealtime());
+        sequence.start(SystemClock.elapsedRealtime(), config.countdownSeconds);
         trigger.setEnabled(false);
         settingsButton.setEnabled(false);
         // No tocar la cámara ni el emisor. Solo cambia la capa de presentación.
@@ -579,7 +584,18 @@ public final class MainActivity extends ComponentActivity {
         if (flash != null) { flash.animate().cancel(); flash.setVisibility(View.GONE); }
         if (trigger != null) trigger.setEnabled(true);
         if (settingsButton != null) settingsButton.setEnabled(true);
-        if (captureStatus != null) captureStatus.setText("Soltá el botón para iniciar · 5 s");
+        updateCountdownLabels();
+    }
+
+    private String idleCaptureText() {
+        return config.countdownSeconds == 0 ? "Soltá el botón para sacar la foto" : "Soltá el botón para iniciar · " + config.countdownSeconds + " s";
+    }
+
+    private void updateCountdownLabels() {
+        if (captureStatus != null) captureStatus.setText(idleCaptureText());
+        if (timerLabel != null) timerLabel.setText(config.countdownSeconds + " s");
+        if (trigger != null) trigger.setContentDescription(config.countdownSeconds == 0 ? "Capturar foto sin cuenta regresiva"
+            : "Capturar foto con cuenta regresiva de " + config.countdownSeconds + " segundos");
     }
 
     private void cancelCapture() {
@@ -642,6 +658,15 @@ public final class MainActivity extends ComponentActivity {
         fpsChoice.setSelection(config.fps == 15 ? 0 : 1);
         content.addView(fpsChoice);
         content.addView(label("Video vertical: se intercambian ancho y alto. Cambiar cámara, resolución o FPS reinicia brevemente el video al guardar.", 12, MUTED));
+        content.addView(label("Cuenta regresiva", 13, TEXT));
+        android.widget.Spinner countdownChoice = new android.widget.Spinner(this);
+        countdownChoice.setId(R.id.countdown_seconds);
+        String[] countdownOptions = new String[16];
+        for (int i = 0; i <= 15; i++) countdownOptions[i] = i == 0 ? "0 s · foto inmediata" : i + " s";
+        countdownChoice.setAdapter(new android.widget.ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, countdownOptions));
+        countdownChoice.setSelection(config.countdownSeconds);
+        content.addView(countdownChoice);
+        content.addView(label("La cuenta empieza al soltar. Con 0 s se toma la foto directamente, sin mostrar números.", 12, MUTED));
         content.addView(section("02 / MENSAJE OSC"));
         EditText address = input(content, "Dirección OSC", config.address, false);
         content.addView(label("Intervalo entre repeticiones OSC", 13, TEXT));
@@ -652,7 +677,7 @@ public final class MainActivity extends ComponentActivity {
         oscInterval.setSelection(config.oscIntervalMs == 10 ? 0 : config.oscIntervalMs == 25 ? 1 : config.oscIntervalMs == 100 ? 3 : 2);
         content.addView(oscInterval);
         content.addView(label("Cada valor (1 y 0) se envía 5 veces. El primero sale inmediatamente. Configurá los receptores para actuar solo al cambiar el valor, sin repetir acciones por cada mensaje.", 12, MUTED));
-        content.addView(label("Soltar inicia 5 s: OSC 1 al comenzar y OSC 0 al finalizar. Flash y foto congelada 1 s solo en pantalla.", 13, ACCENT));
+        content.addView(label("OSC 1 al comenzar y OSC 0 al finalizar la cuenta. Con 0 s: cinco 1 seguidos de cinco 0, sin retrasar la foto. Flash y foto congelada 1 s solo en pantalla.", 13, ACCENT));
         content.addView(label("Las fotos se guardan en Pictures/AbismoCam. Frontal espejada en pantalla y foto; NDI siempre sin espejo.", 12, MUTED));
         content.addView(section("03 / DESTINOS"));
         RadioGroup mode = new RadioGroup(this);
@@ -712,6 +737,7 @@ public final class MainActivity extends ComponentActivity {
                 config.width = width;
                 config.height = width * 9 / 16;
                 config.fps = fps;
+                config.countdownSeconds = countdownChoice.getSelectedItemPosition();
                 config.oscIntervalMs = new int[] {10, 25, 50, 100}[oscInterval.getSelectedItemPosition()];
                 config.destinations.clear(); config.destinations.addAll(draft);
                 config.save(this);
@@ -723,7 +749,7 @@ public final class MainActivity extends ComponentActivity {
             } catch (IllegalArgumentException invalid) { error.setText(invalid.getMessage()); }
         });
         content.addView(section("ACERCA DE ESTA PRUEBA"));
-        content.addView(label("abismoCam · 0.5.0 · Lisandro Peralta\nNDI automático al abrir. Continúa durante el conteo, la foto y los ajustes. Se detiene al salir de la app. OSC no tiene confirmación de recepción.\nNDI® is a registered trademark of Vizrt NDI AB.", 12, MUTED));
+        content.addView(label("abismoCam · 0.6.0 · Lisandro Peralta\nNDI automático al abrir. Continúa durante el conteo, la foto y los ajustes. Se detiene al salir de la app. OSC no tiene confirmación de recepción.\nNDI® is a registered trademark of Vizrt NDI AB.", 12, MUTED));
         Button ndiInfo = button("NDI® · ndi.video", false);
         ndiInfo.setOnClickListener(v -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://ndi.video"))));
         content.addView(ndiInfo);

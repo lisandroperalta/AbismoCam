@@ -1,6 +1,6 @@
 # abismoCam — historial y hoja de ruta
 
-Última actualización: **30 de septiembre de 2026**. Versión actual: **0.5.0** (código de versión Android: 6).
+Última actualización: **1 de octubre de 2026**. Versión actual: **0.6.0** (código de versión Android: 7).
 
 Aplicación Android de Lisandro Peralta para el proyecto **El abismo de la visibilidad**. Transmite la cámara por NDI, envía señales OSC y guarda fotografías con una cuenta regresiva local.
 
@@ -111,6 +111,16 @@ Validación: compilación y once pruebas unitarias correctas; lint con 0 errores
 - Cancelar la cuenta reemplaza los `1` pendientes por cinco `0`. Un cierre normal de la actividad deja completar esa ráfaga mientras el proceso siga vivo.
 - Los receptores deben tolerar duplicados y actuar ante cambios de estado. No hay confirmación de recepción, orden garantizado ni sincronización exacta con NDI.
 - Se añadieron pruebas de UDP para los dos valores y los cuatro intervalos, cancelación de repeticiones pendientes y cierre. Se adaptaron las pruebas del flujo Android y se añadió una prueba del selector y su persistencia.
+
+### 0.6.0 — cuenta regresiva configurable (01/10/2026)
+
+- Se añadió un selector de **0 a 15 segundos**, en incrementos de uno, con **5 segundos por defecto**. La selección queda guardada; las instalaciones anteriores conservan sus otros ajustes.
+- El tiempo indicado en la pantalla principal y la descripción accesible del disparador reflejan la selección. Guardar el tiempo no reinicia NDI.
+- Con 0 s, soltar solicita inmediatamente el siguiente cuadro disponible, sin números en pantalla. Se mantienen el flash, el congelado de un segundo, el guardado JPEG y el bloqueo de disparos adicionales.
+- Para 0 s se programan **cinco 1 y luego cinco 0**. Con intervalo OSC de 50 ms, el primer 0 se envía a los 250 ms y el último a los 450 ms. Para 10/25/100 ms esos pares son 50/90, 125/225 y 500/900 ms. La foto no espera esos envíos.
+- Para 1–15 s, OSC sigue enviando cinco 1 al comienzo y cinco 0 al final de la cuenta. Los destinos individuales y broadcast usan el mismo comportamiento.
+- Se ampliaron las pruebas del reloj para todas las duraciones, del pulso OSC inmediato para los cuatro intervalos y del ajuste persistente. Las pruebas Android incluyen captura sin cuenta y regresión del flujo de cinco segundos; los resultados se detallan en VALIDACION.md.
+- Resultado: 16 pruebas unitarias y pruebas Android de 0 s/configuración aprobadas. La regresión de captura de cinco segundos falló en dos intentos por falta de un cuadro nuevo, consistente con el fallo de cámara del emulador ya registrado; queda pendiente de validación física.
 
 ## Estado actual y límites conocidos
 

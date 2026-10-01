@@ -1,3 +1,16 @@
+# abismoCam 0.6.0 — cuenta regresiva — 1 de octubre de 2026
+
+- Compilación correcta; dieciséis pruebas unitarias aprobadas; lint con 0 errores y 26 advertencias.
+- Reloj de captura: verificados todos los tiempos de 1 a 15 s, el caso 0 inmediato sin números, bloqueo de disparos y congelado; se conservan pruebas de cancelación y timeout.
+- OSC inmediato: UDP real en loopback verifica cinco 1 y cinco 0 en orden, para 10/25/50/100 ms, límites temporales inferiores y finalización tras cerrar el repetidor. No es una medición de latencia de la red física.
+- Android, prueba de 0 s aprobada: mantener pulsado no dispara; soltar inicia la captura sin estado de cuenta; llegan diez mensajes en orden; se guarda un JPEG legible y avanza NDI. Informe: `entregables/validacion/countdown-v6-1.txt`.
+- Android, configuración aprobada: migración a 5 s, dieciséis opciones, selección/persistencia de 0/1/5/15, actualización de texto principal y recreación de actividad. Informe: `countdown-v6-3.txt`.
+- La regresión Android de cinco segundos falló en ambos intentos al esperar la foto congelada. El registro muestra timeout sin un cuadro nuevo y executor de análisis inactivo, patrón consistente con la limitación de cámara del emulador ya documentada. No se considera una regresión aprobada ni un problema resuelto. Informes: `countdown-v6-2.txt` y `countdown-v6-retry.txt`.
+- Revisión visual del nuevo selector: `countdown-v6.png`.
+- Pendiente: repetir cuentas de 0, 1, 5 y 15 s, capturas y recepción OSC en el A51 y los receptores físicos; comprobar la falla de cámara conocida.
+
+## Historial de validación
+
 # abismoCam 0.5.0 — repetición OSC — 30 de septiembre de 2026
 
 - Compilación correcta. Trece pruebas unitarias aprobadas; lint: 0 errores, 26 advertencias.
