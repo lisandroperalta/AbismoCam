@@ -75,7 +75,7 @@ public final class MainActivity extends ComponentActivity {
     private static final int BG = 0xff090909, PANEL = 0xff232323, ACCENT = 0xffffffff, TEXT = 0xffffffff, MUTED = 0xffbdbdbd;
     private final Handler main = new Handler(Looper.getMainLooper());
     private final ExecutorService cameraExecutor = Executors.newSingleThreadExecutor();
-    private final ExecutorService oscExecutor = Executors.newSingleThreadExecutor();
+    private final OscRepeater oscRepeater = new OscRepeater(this::sendOscPacket);
     private final ExecutorService photoExecutor = Executors.newSingleThreadExecutor();
     private final Osc.Hold hold = new Osc.Hold(this::queueOsc);
     private final AtomicReference<CaptureRequest> pendingCapture = new AtomicReference<>();
@@ -505,16 +505,19 @@ public final class MainActivity extends ComponentActivity {
     }
 
     private void queueOsc(List<Osc.Destination> targets, String address, int value) {
-        oscExecutor.execute(() -> {
+        oscRepeater.send(targets, address, value, config.oscIntervalMs);
+    }
+
+    private void sendOscPacket(List<Osc.Destination> targets, String address, int value) {
             Osc.Result result = Osc.send(targets, address, value);
             String report = address + " " + value + " → " + result.sent + " destino(s) · UDP sin confirmación";
             if (!result.errors.isEmpty()) report += "\nError: " + String.join("; ", result.errors);
             String message = report;
             main.post(() -> {
+                if (isDestroyed()) return;
                 oscMessage = message;
                 if (!settingsVisible && oscStatus != null) oscStatus.setText(message);
             });
-        });
     }
 
     private void beginCountdown() {
@@ -641,6 +644,14 @@ public final class MainActivity extends ComponentActivity {
         content.addView(label("Video vertical: se intercambian ancho y alto. Cambiar cámara, resolución o FPS reinicia brevemente el video al guardar.", 12, MUTED));
         content.addView(section("02 / MENSAJE OSC"));
         EditText address = input(content, "Dirección OSC", config.address, false);
+        content.addView(label("Intervalo entre repeticiones OSC", 13, TEXT));
+        android.widget.Spinner oscInterval = new android.widget.Spinner(this);
+        oscInterval.setId(R.id.osc_interval);
+        oscInterval.setAdapter(new android.widget.ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item,
+            new String[] {"10 ms", "25 ms", "50 ms", "100 ms"}));
+        oscInterval.setSelection(config.oscIntervalMs == 10 ? 0 : config.oscIntervalMs == 25 ? 1 : config.oscIntervalMs == 100 ? 3 : 2);
+        content.addView(oscInterval);
+        content.addView(label("Cada valor (1 y 0) se envía 5 veces. El primero sale inmediatamente. Configurá los receptores para actuar solo al cambiar el valor, sin repetir acciones por cada mensaje.", 12, MUTED));
         content.addView(label("Soltar inicia 5 s: OSC 1 al comenzar y OSC 0 al finalizar. Flash y foto congelada 1 s solo en pantalla.", 13, ACCENT));
         content.addView(label("Las fotos se guardan en Pictures/AbismoCam. Frontal espejada en pantalla y foto; NDI siempre sin espejo.", 12, MUTED));
         content.addView(section("03 / DESTINOS"));
@@ -701,6 +712,7 @@ public final class MainActivity extends ComponentActivity {
                 config.width = width;
                 config.height = width * 9 / 16;
                 config.fps = fps;
+                config.oscIntervalMs = new int[] {10, 25, 50, 100}[oscInterval.getSelectedItemPosition()];
                 config.destinations.clear(); config.destinations.addAll(draft);
                 config.save(this);
                 oscMessage = "Configuración guardada. Listo para probar OSC.";
@@ -711,7 +723,7 @@ public final class MainActivity extends ComponentActivity {
             } catch (IllegalArgumentException invalid) { error.setText(invalid.getMessage()); }
         });
         content.addView(section("ACERCA DE ESTA PRUEBA"));
-        content.addView(label("abismoCam · 0.4.1 · Lisandro Peralta\nNDI automático al abrir. Continúa durante el conteo, la foto y los ajustes. Se detiene al salir de la app. OSC no tiene confirmación de recepción.\nNDI® is a registered trademark of Vizrt NDI AB.", 12, MUTED));
+        content.addView(label("abismoCam · 0.5.0 · Lisandro Peralta\nNDI automático al abrir. Continúa durante el conteo, la foto y los ajustes. Se detiene al salir de la app. OSC no tiene confirmación de recepción.\nNDI® is a registered trademark of Vizrt NDI AB.", 12, MUTED));
         Button ndiInfo = button("NDI® · ndi.video", false);
         ndiInfo.setOnClickListener(v -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://ndi.video"))));
         content.addView(ndiInfo);
@@ -800,7 +812,7 @@ public final class MainActivity extends ComponentActivity {
         if (cameraProvider != null) cameraProvider.unbindAll();
         // Esperar los callbacks de cámara antes de cerrar el executor de fotos.
         cameraExecutor.execute(() -> { if (ndi != null) ndi.close(); photoExecutor.shutdown(); });
-        cameraExecutor.shutdown(); oscExecutor.shutdown();
+        cameraExecutor.shutdown(); oscRepeater.close();
         main.removeCallbacksAndMessages(null);
         super.onDestroy();
     }

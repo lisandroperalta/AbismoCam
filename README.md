@@ -1,6 +1,6 @@
-﻿# Abismo Cam 2 · MVP Android
+# abismoCam · MVP Android
 
-Cámara para **El abismo de la visibilidad**, Biopus. Versión 0.4.0. Samsung A51 como dispositivo objetivo; Android 8 o posterior, ARM64. Interfaz en español, orientación vertical, cámara frontal por defecto, sin micrófono. Guarda fotografías, no graba video.
+Cámara para **El abismo de la visibilidad**, Lisandro Peralta. Versión 0.5.0. Samsung A51 como dispositivo objetivo; Android 8 o posterior, ARM64. Interfaz en español, orientación vertical, cámara frontal por defecto, sin micrófono. Guarda fotografías, no graba video.
 
 ## Estado
 
@@ -28,13 +28,17 @@ El botón y la interfaz no se incluyen en el video. La vista frontal puede mostr
 
 En ajustes (engranaje durante tres segundos), elegir **Unicast** o **Multicast** y tocar **Guardar y volver a cámara**. Unicast es el valor inicial; la selección queda guardada. Cambiar el selector sin guardar no modifica la transmisión. Al guardar un cambio se reinicia el emisor NDI; los receptores pueden mostrar negro o el último cuadro durante la reconexión. El nombre sigue siendo `abismoCam`. Si NDI estaba detenido manualmente, permanece detenido hasta iniciarlo desde ajustes.
 
-Multicast habilita la negociación con cada receptor: no obliga a todos a usarlo. La red debe permitir multicast y administrar correctamente IGMP; un receptor con multicast deshabilitado puede usar unicast. Probar con el teléfono por Wi-Fi de 5 GHz y las computadoras por cable antes de la instalación. OSC es independiente y conserva sus modos individual/broadcast sin repeticiones adicionales.
+Multicast habilita la negociación con cada receptor: no obliga a todos a usarlo. La red debe permitir multicast y administrar correctamente IGMP; un receptor con multicast deshabilitado puede usar unicast. Probar con el teléfono por Wi-Fi de 5 GHz y las computadoras por cable antes de la instalación. OSC es independiente y conserva sus modos individual/broadcast; ambos utilizan las repeticiones configuradas.
 
 El SDK estándar recibe la configuración oficial mediante `NDI_CONFIG_DIR` y el archivo privado `files/ndi/ndi-config.v1.json`. Se escribe de forma atómica, con `ndi.multicast.send.enable`, TTL 1 y rango 239.255.0.0/16. El cambio cierra el emisor, termina la instancia del SDK y vuelve a inicializarlo antes de crear la fuente. No se modifican ajustes del router ni de las computadoras receptoras.
 
 Referencias: [configuración SDK](https://docs.ndi.video/all/developing-with-ndi/sdk/configuration-files), [NDI_CONFIG_DIR y Android](https://docs.ndi.video/all/developing-with-ndi/sdk/platform-considerations).
 
 ## Verificar OSC desde Windows
+
+Desde 0.5.0, cada valor (`1` y `0`) se envía **cinco veces**, con el primero inmediato y **50 ms** entre mensajes por defecto: instantes 0, 50, 100, 150 y 200 ms. En ajustes se elige **10, 25, 50 o 100 ms**, que abarcan 40, 100, 200 o 400 ms respectivamente. La selección se aplica al guardar y persiste sin reiniciar NDI; instalaciones anteriores adoptan 50 ms manteniendo sus otros ajustes.
+
+Los receptores deben actuar solo cuando cambia el valor para evitar cinco acciones por transición. UDP sigue sin confirmar entrega ni garantizar orden. Los intervalos son nominales, sujetos a la planificación de Android y la red. Al cancelar la cuenta se cancelan los `1` pendientes y se programan cinco `0`; un cierre normal de la actividad deja completar esa última ráfaga mientras el proceso siga vivo. Un cierre forzado o una pérdida de red puede impedirlo.
 
 En cada computadora, abrir PowerShell en esta carpeta:
 
@@ -70,7 +74,7 @@ Dependencias fijadas: AGP 8.13.2, Gradle 8.13 (con checksum), Java 17 o posterio
 
 Resultado: `entregables/AbismoCam-debug.apk`. Es un APK de desarrollo para instalar manualmente; no es una publicación en Google Play. Los reportes de pruebas y análisis estático se exportan a `entregables/validacion/`.
 
-Las pruebas unitarias cubren OSC y el reloj de captura (11 casos). Con un dispositivo o emulador conectado, `gradlew.bat connectedDebugAndroidTest` ejecuta además tres pruebas del flujo Android: toques, OSC UDP real, captura JPEG, cancelación y avance de los cuadros enviados al SDK NDI durante el congelado. Requieren la biblioteca NDI de la arquitectura correspondiente; no prueban un receptor NDI externo.
+Las pruebas unitarias cubren OSC, sus repeticiones y el reloj de captura (13 casos). Con un dispositivo o emulador conectado, `gradlew.bat connectedDebugAndroidTest` ejecuta además las pruebas Android: toques, OSC UDP real, captura JPEG, cancelación, selección de intervalos, transporte NDI y avance de cuadros enviados al SDK durante el congelado. Requieren la biblioteca NDI de la arquitectura correspondiente; no prueban un receptor NDI externo.
 
 Los archivos temporales de compilación se guardan en `%USERPROFILE%/.abismocam/build/`, en una subcarpeta por proyecto, para evitar bloqueos de OneDrive. El código y los entregables permanecen en esta carpeta. En Android Studio puede ejecutarse la tarea raíz `exportDebugApk` para copiar el APK a `entregables`.
 

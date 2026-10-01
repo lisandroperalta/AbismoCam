@@ -11,6 +11,7 @@
     <item name="ndi_transport" type="id" />
     <item name="resolution" type="id" />
     <item name="fps" type="id" />
+    <item name="osc_interval" type="id" />
     <item name="save_settings" type="id" />
     <item name="capture_status" type="id" />
 </resources>

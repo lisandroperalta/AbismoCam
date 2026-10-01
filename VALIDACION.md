@@ -1,4 +1,16 @@
-﻿# Abismo Cam 2 — transporte NDI, versión 0.4.0 — 26 de septiembre de 2026
+# abismoCam 0.5.0 — repetición OSC — 30 de septiembre de 2026
+
+- Compilación correcta. Trece pruebas unitarias aprobadas; lint: 0 errores, 26 advertencias.
+- Nuevas pruebas UDP: cinco mensajes por cada valor 1/0, intervalos 10/25/50/100 ms, dos destinos habilitados y uno deshabilitado, sin sexto mensaje. También se comprueba cancelación de repeticiones antiguas y finalización de los 0 al cerrar el repetidor.
+- Prueba Android de configuración aprobada: migración a 50 ms sin perder dirección/calidad, selección y persistencia de las cuatro opciones, y recreación de la actividad.
+- Prueba Android de cancelación aprobada: después del primer 0 no aparecen 1 pendientes; se reciben cinco 0.
+- En la ejecución conjunta falló la prueba de foto congelada por espera de cuadro, consistente con el fallo intermitente de cámara ya documentado. La repetición aislada aprobó: cinco 1 al inicio, cinco 0 al final, bloqueo de disparos adicionales, JPEG y avance de NDI durante el congelado. No se considera resuelto el fallo intermitente del emulador.
+- Informes: `entregables/validacion/osc-v5-results.txt` (incluye el fallo conjunto) y `osc-v5-capture-isolated.txt` (prueba aislada aprobada).
+- Pendiente: comprobar duplicados, recepción y pérdidas en los programas y la red física. Los intervalos son nominales; no se garantiza entrega UDP ni recuperación ante cierre forzado del proceso.
+
+## Historial de validación
+
+# Abismo Cam 2 — transporte NDI, versión 0.4.0 — 26 de septiembre de 2026
 
 - Compilación, once pruebas unitarias y lint completados sin errores.
 - Prueba instrumentada `NdiTransportTest`: Unicast → Multicast → Unicast. Verifica aplicación solo al guardar, persistencia, archivo oficial del SDK, variable NDI_CONFIG_DIR y reanudación de cuadros enviados al SDK. Nombre, qHD y 30 fps conservados.

@@ -19,6 +19,7 @@ final class Config {
     int height = 540;
     int fps = 30;
     boolean ndiMulticast = false;
+    int oscIntervalMs = 50;
     final List<Osc.Destination> destinations = new ArrayList<>();
 
     List<Osc.Destination> targets() {
@@ -36,6 +37,7 @@ final class Config {
             JSONObject obj = new JSONObject(json);
             config.sourceName = "abismoCam";
             config.ndiMulticast = obj.optBoolean("ndiMulticast", false);
+            config.oscIntervalMs = OscRepeater.validInterval(obj.optInt("oscIntervalMs", 50));
             config.address = obj.optString("address", config.address);
             Osc.validateAddress(config.address);
             config.broadcast = obj.optBoolean("broadcast", false);
@@ -65,7 +67,8 @@ final class Config {
             JSONObject obj = new JSONObject();
             obj.put("schemaVersion", 3).put("sourceName", sourceName).put("address", address).put("broadcast", broadcast)
                 .put("broadcastIp", broadcastIp).put("broadcastPort", broadcastPort)
-                .put("frontCamera", frontCamera).put("width", width).put("fps", fps).put("ndiMulticast", ndiMulticast);
+                .put("frontCamera", frontCamera).put("width", width).put("fps", fps).put("ndiMulticast", ndiMulticast)
+                .put("oscIntervalMs", oscIntervalMs);
             JSONArray list = new JSONArray();
             for (Osc.Destination d : destinations)
                 list.put(new JSONObject().put("name", d.name).put("ip", d.ip).put("port", d.port).put("enabled", d.enabled));

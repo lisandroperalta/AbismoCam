@@ -1,6 +1,6 @@
 # abismoCam — historial y hoja de ruta
 
-Última actualización: **26 de septiembre de 2026**. Versión actual: **0.4.1** (código de versión Android: 5).
+Última actualización: **30 de septiembre de 2026**. Versión actual: **0.5.0** (código de versión Android: 6).
 
 Aplicación Android de Lisandro Peralta para el proyecto **El abismo de la visibilidad**. Transmite la cámara por NDI, envía señales OSC y guarda fotografías con una cuenta regresiva local.
 
@@ -8,7 +8,7 @@ Aplicación Android de Lisandro Peralta para el proyecto **El abismo de la visib
 
 Se revisaron la conversación de desarrollo, el código actual, Git, README.md, VALIDACION.md y los informes de pruebas. El primer commit disponible (`e2fb2e8`, 25/09/2026) ya contiene la versión **0.3.0**: no hay commits separados que permitan fechar o numerar con certeza las primeras etapas. Por eso se describen como etapas previas, sin atribuirles números de versión.
 
-Las versiones 0.4.0 y 0.4.1 están implementadas en la carpeta de trabajo, pero no tienen un commit propio en el historial local revisado. Este documento no implica que esos cambios ya estén publicados en GitHub.
+En la revisión inicial del 26/09, las versiones 0.4.0 y 0.4.1 estaban implementadas en la carpeta de trabajo, sin un commit propio en el historial entonces revisado. Este documento no implica que los cambios más recientes ya estén publicados en GitHub.
 
 ## Historial de cambios
 
@@ -102,6 +102,16 @@ Fecha de compilación y comprobación: **26/09/2026**.
 
 Validación: compilación y once pruebas unitarias correctas; lint con 0 errores y 26 advertencias. Se verificaron en el emulador el centrado del título, la ubicación de los textos y los créditos de Acerca de. No se repitió toda la suite instrumentada para estos cambios cosméticos.
 
+### 0.5.0 — repetición configurable de OSC (30/09/2026)
+
+- Cada transición, tanto `1` como `0`, genera cinco envíos con el mismo destino, dirección y valor.
+- Intervalo predeterminado: **50 ms**, con primer envío inmediato y último programado a los 200 ms.
+- Selector en ajustes: **10, 25, 50 o 100 ms**. Se guarda sin reiniciar NDI; instalaciones anteriores adoptan 50 ms conservando sus otros ajustes.
+- Se aplica tanto a destinos individuales como a broadcast.
+- Cancelar la cuenta reemplaza los `1` pendientes por cinco `0`. Un cierre normal de la actividad deja completar esa ráfaga mientras el proceso siga vivo.
+- Los receptores deben tolerar duplicados y actuar ante cambios de estado. No hay confirmación de recepción, orden garantizado ni sincronización exacta con NDI.
+- Se añadieron pruebas de UDP para los dos valores y los cuatro intervalos, cancelación de repeticiones pendientes y cierre. Se adaptaron las pruebas del flujo Android y se añadió una prueba del selector y su persistencia.
+
 ## Estado actual y límites conocidos
 
 - APK para instalación manual: `entregables/AbismoCam-debug.apk`. Es una compilación de desarrollo, no una publicación en Google Play.
@@ -129,12 +139,12 @@ Estas tareas son verificaciones pendientes; no implican nuevas funciones ni tien
 
 ### Propuestas postergadas o sin implementación acordada
 
-- **Repetición de OSC durante un segundo:** postergada expresamente. Si se retoma, definir cómo tratarán los receptores los mensajes duplicados antes de implementarla.
+- **Repetición de OSC durante un segundo:** reemplazada por la decisión implementada en 0.5.0: cinco mensajes con intervalo configurable. No queda pendiente la propuesta original de un segundo.
 - **Forzar multicast sin permitir unicast:** consultado, pero no implementado. Requiere confirmar una vía compatible con el SDK y con los receptores antes de prometer esa función.
 
 ## Referencias del proyecto
 
-- [README.md](README.md): instalación, configuración y compilación. Su encabezado todavía describe 0.4.0 con el nombre anterior al momento de redactar este historial.
+- [README.md](README.md): instalación, configuración y compilación actualizadas.
 - [VALIDACION.md](VALIDACION.md): pruebas y limitaciones documentadas de 0.3.0 y 0.4.0.
 - [Informes de validación](entregables/validacion/): resultados y capturas conservados en el proyecto. Algunos informes se actualizan al recompilar; no son un archivo inmutable de cada versión.
 - [Configuración de versión Android](app/build.gradle): versión actual del código.

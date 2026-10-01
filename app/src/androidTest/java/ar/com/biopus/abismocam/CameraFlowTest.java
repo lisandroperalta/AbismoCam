@@ -90,6 +90,7 @@ public class CameraFlowTest {
                 receiver.setSoTimeout(1500); assertEquals(1, receive(receiver));
                 // Intentos repetidos durante el conteo no generan otra secuencia.
                 scenario.onActivity(a -> { for (int i = 0; i < 4; i++) a.findViewById(R.id.shutter).performClick(); });
+                for (int i = 0; i < 4; i++) assertEquals(1, receive(receiver));
                 receiver.setSoTimeout(6500); assertEquals(0, receive(receiver));
                 long elapsed = SystemClock.elapsedRealtime() - start;
                 assertTrue("OSC 0 antes de cinco segundos: " + elapsed, elapsed >= 4850);
@@ -120,6 +121,7 @@ public class CameraFlowTest {
                     assertNotNull(saved); assertEquals(frozen.get().getWidth(), saved.getWidth());
                     assertEquals(frozen.get().getHeight(), saved.getHeight());
                 }
+                for (int i = 0; i < 4; i++) assertEquals(0, receive(receiver));
                 receiver.setSoTimeout(200);
                 assertThrows(java.net.SocketTimeoutException.class, () -> receive(receiver));
             }
@@ -144,7 +146,14 @@ public class CameraFlowTest {
                 scenario.onActivity(a -> a.findViewById(R.id.shutter).performClick());
                 receiver.setSoTimeout(1500); assertEquals(1, receive(receiver));
                 scenario.moveToState(androidx.lifecycle.Lifecycle.State.CREATED);
-                assertEquals(0, receive(receiver));
+                // Puede haber unos 1 ya recibidos antes de onPause; después del primer 0 no debe quedar ninguno.
+                int next;
+                int ones = 1;
+                while ((next = receive(receiver)) == 1) assertTrue(++ones <= 5);
+                assertEquals(0, next);
+                for (int i = 0; i < 4; i++) assertEquals(0, receive(receiver));
+                receiver.setSoTimeout(200);
+                assertThrows(java.net.SocketTimeoutException.class, () -> receive(receiver));
             }
         } finally { context.getSharedPreferences("config", 0).edit().putString("json", previous).commit(); }
     }

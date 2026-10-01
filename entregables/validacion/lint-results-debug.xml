@@ -405,7 +405,7 @@
         errorLine2="                              ~~~~~~~~~~~~~~~~~">
         <location
             file="D:\OneDrive\Trabajos\Biopus\El abismo de la visibilidad\AbismoCam\app\src\main\java\ar\com\biopus\abismocam\MainActivity.java"
-            line="542"
+            line="545"
             column="31"/>
     </issue>
 
@@ -423,7 +423,7 @@
         errorLine2="                                                                                   ~~~~~~~~~~~~~~~">
         <location
             file="D:\OneDrive\Trabajos\Biopus\El abismo de la visibilidad\AbismoCam\app\src\main\java\ar\com\biopus\abismocam\MainActivity.java"
-            line="557"
+            line="560"
             column="84"/>
     </issue>
 
@@ -441,7 +441,7 @@
         errorLine2="                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\OneDrive\Trabajos\Biopus\El abismo de la visibilidad\AbismoCam\app\src\main\java\ar\com\biopus\abismocam\MainActivity.java"
-            line="579"
+            line="582"
             column="58"/>
     </issue>
 
